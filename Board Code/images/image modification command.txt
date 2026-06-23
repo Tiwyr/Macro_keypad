@@ -1,0 +1,1 @@
+ magick E:\images\No_Vol_8bit-40.bmp -alpha remove -alpha off -colors 16 -type Palette BMP3:E:\images\No_Vol_8bit-40_4bit.bmp

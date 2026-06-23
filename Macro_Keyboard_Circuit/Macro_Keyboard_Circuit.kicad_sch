@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "060bae83-e3d9-43fa-98fe-99811f977cfd")
 	(paper "A4")
 	(lib_symbols
@@ -15,8 +15,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "D"
 				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -25,6 +29,8 @@
 			)
 			(property "Value" "1N4148W"
 				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -33,65 +39,79 @@
 			)
 			(property "Footprint" "Diode_SMD:D_SOD-123"
 				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Sim.Device" "D"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Sim.Pins" "1=K 2=A"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "diode"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "D*SOD?123*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "1N4148W_0_1"
@@ -173,14 +193,19 @@
 			(embedded_fonts no)
 		)
 		(symbol "HSMW_C280:HSMW-C280"
+			(body_styles demorgan)
 			(pin_names
 				(offset 0.254)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "LED"
 				(at 5.08 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -189,6 +214,8 @@
 			)
 			(property "Value" "HSMW-C280"
 				(at 5.08 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -197,35 +224,43 @@
 			)
 			(property "Footprint" "LED_HSMW-C280_BRA"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "HSMW-C280"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -234,20 +269,24 @@
 			)
 			(property "ki_keywords" "HSMW-C280"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "LED_HSMW-C280_BRA LED_HSMW-C280_BRA-M LED_HSMW-C280_BRA-L"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "HSMW-C280_1_1"
@@ -480,24 +519,6 @@
 					)
 				)
 				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
 					(at 10.16 0 180)
 					(length 2.54)
 					(name ""
@@ -508,6 +529,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -791,8 +830,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
 				(at -5.08 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -802,6 +845,8 @@
 			)
 			(property "Value" "KY-040"
 				(at -5.08 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -811,110 +856,132 @@
 			)
 			(property "Footprint" "KY-040:KY-040-PORT"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "MF" "Joy-IT"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Description_1" "KY-5.0-4P Green(RAL6018/T) ; CONTACT WITH TIN PLATED MARK"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Package" "Package"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Price" "None"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "SnapEDA_Link" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=snap"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "MP" "KY-040"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Availability" "Not in stock"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Check_prices" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=eda"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(symbol "KY-040_0_0"
@@ -965,6 +1032,24 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -10.16 -5.08 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
 				(pin output line
 					(at -10.16 0 0)
 					(length 5.08)
@@ -1001,36 +1086,23 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -10.16 -5.08 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
 			)
 			(embedded_fonts no)
 		)
 		(symbol "OSTTC082162:OSTTC082162"
+			(body_styles demorgan)
 			(pin_names
 				(offset 0.254)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
 				(at 8.89 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -1039,6 +1111,8 @@
 			)
 			(property "Value" "OSTTC082162"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -1047,35 +1121,43 @@
 			)
 			(property "Footprint" "CONN8_OSTTC082162_SHT"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "OSTTC082162"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1084,20 +1166,24 @@
 			)
 			(property "ki_keywords" "OSTTC082162"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "CONN8_OSTTC082162_SHT"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "OSTTC082162_1_1"
@@ -2067,14 +2153,19 @@
 			(embedded_fonts no)
 		)
 		(symbol "PRT_16766:PRT-16766"
+			(body_styles demorgan)
 			(pin_names
 				(offset 0.254)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J2"
 				(at 15.24 -19.0499 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -2084,6 +2175,8 @@
 			)
 			(property "Value" "PRT-16766"
 				(at 15.24 -21.5899 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -2093,35 +2186,43 @@
 			)
 			(property "Footprint" "PRT_16766:CONN_BM04B-SRSS-TB_SPK"
 				(at 11.43 -11.43 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "PRT-16766"
 				(at 11.43 -11.43 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2130,20 +2231,24 @@
 			)
 			(property "ki_keywords" "PRT-16766"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "CONN_BM04B-SRSS-TB_SPK"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "PRT-16766_1_1"
@@ -2340,34 +2445,16 @@
 					)
 				)
 				(pin unspecified line
-					(at 3.81 -11.43 270)
+					(at 11.43 -11.43 270)
 					(length 5.08)
-					(name "GND"
+					(name "D13"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 6.35 -11.43 270)
-					(length 5.08)
-					(name "3V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2394,16 +2481,34 @@
 					)
 				)
 				(pin unspecified line
-					(at 11.43 -11.43 270)
+					(at 6.35 -11.43 270)
 					(length 5.08)
-					(name "D13"
+					(name "3V"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 3.81 -11.43 270)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2687,8 +2792,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
 				(at -3.8146 1.2715 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2698,50 +2807,60 @@
 			)
 			(property "Value" "33R"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Footprint" "SMD-RES-33R-1_-1_16W_0402_:R0402"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "MPN" "RC0402FR-0733RL"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify bottom)
-					(hide yes)
 				)
 			)
 			(symbol "SMD-RES-33R-1_-1_16W_0402__0_0"
@@ -2759,7 +2878,7 @@
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2777,7 +2896,7 @@
 				(pin passive line
 					(at 3.81 0 180)
 					(length 2.54)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2799,8 +2918,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U2"
 				(at 9.525 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2809,6 +2932,8 @@
 			)
 			(property "Value" "Adafruit KB2040"
 				(at 9.525 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2817,29 +2942,35 @@
 			)
 			(property "Footprint" "SparkFun-Board:ProMicroC"
 				(at 31.496 -48.768 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.sparkfun.com/products/15795"
 				(at -0.508 -52.578 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "ProMicroC_1_1"
@@ -3071,178 +3202,16 @@
 					)
 				)
 				(pin input line
-					(at 25.4 -2.54 180)
+					(at 25.4 -30.48 180)
 					(length 2.54)
-					(name "D0"
+					(name "D9"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -5.08 180)
-					(length 2.54)
-					(name "D1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -7.62 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -10.16 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -12.7 180)
-					(length 2.54)
-					(name "D2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -15.24 180)
-					(length 2.54)
-					(name "D3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -17.78 180)
-					(length 2.54)
-					(name "D4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -20.32 180)
-					(length 2.54)
-					(name "D5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -22.86 180)
-					(length 2.54)
-					(name "D6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 25.4 -25.4 180)
-					(length 2.54)
-					(name "D7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
+					(number "13"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3269,16 +3238,178 @@
 					)
 				)
 				(pin input line
-					(at 25.4 -30.48 180)
+					(at 25.4 -25.4 180)
 					(length 2.54)
-					(name "D9"
+					(name "D7"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "13"
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -22.86 180)
+					(length 2.54)
+					(name "D6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -20.32 180)
+					(length 2.54)
+					(name "D5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -17.78 180)
+					(length 2.54)
+					(name "D4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -15.24 180)
+					(length 2.54)
+					(name "D3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -12.7 180)
+					(length 2.54)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -10.16 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -7.62 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -5.08 180)
+					(length 2.54)
+					(name "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 25.4 -2.54 180)
+					(length 2.54)
+					(name "D0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3300,8 +3431,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
 				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3311,6 +3446,8 @@
 			)
 			(property "Value" "SW_Push"
 				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3319,38 +3456,46 @@
 			)
 			(property "Footprint" ""
 				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "switch normally-open pushbutton push-button"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "SW_Push_0_1"
@@ -3439,18 +3584,127 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 110.49 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0eb045a2-5858-414e-903f-b2918686f877")
-	)
-	(junction
-		(at 57.15 179.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1388777b-a607-4c18-b739-3ee1b7955bc8")
 	)
 	(junction
 		(at 86.36 148.59)
@@ -3483,10 +3737,22 @@
 		(uuid "25e28359-1d94-43a8-9960-72280509bb9f")
 	)
 	(junction
+		(at 57.15 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d562bfb-ccae-4411-a969-9aa06d99628a")
+	)
+	(junction
 		(at 127 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "343b0280-900a-494d-bcb6-3486abbbaf47")
+	)
+	(junction
+		(at 238.76 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3484b3d6-4b3f-467f-b973-cd9cade6f29a")
 	)
 	(junction
 		(at 83.82 101.6)
@@ -3507,22 +3773,22 @@
 		(uuid "41ed28c4-05b6-4d27-80ac-9c9ea2ae062b")
 	)
 	(junction
+		(at 137.16 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4990dcff-3f00-43ef-82c3-ed51c89afb8b")
+	)
+	(junction
 		(at 110.49 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f67cc94-0372-4e4d-a3e8-6ee36eac590d")
 	)
 	(junction
-		(at 240.03 67.31)
+		(at 205.74 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "620abeb4-625d-472d-8c66-ac772a719b68")
-	)
-	(junction
-		(at 193.04 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7783fd23-ce27-4045-9685-e8735f963154")
+		(uuid "7351c01a-cfc4-4af9-89ac-49e633514652")
 	)
 	(junction
 		(at 86.36 120.65)
@@ -3555,12 +3821,6 @@
 		(uuid "854866a1-092f-498f-bd68-74c841004dd7")
 	)
 	(junction
-		(at 86.36 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "857087fd-af0f-464c-8025-81cc6ee27a3b")
-	)
-	(junction
 		(at 86.36 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3573,22 +3833,16 @@
 		(uuid "8610b31b-2948-4869-8f2c-705ed05ac4c6")
 	)
 	(junction
-		(at 176.53 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8ba56b8a-5a53-40f0-b959-06178e23d9d6")
-	)
-	(junction
 		(at 57.15 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e3fec40-c7ae-4268-a0df-6fa25f3476ba")
 	)
 	(junction
-		(at 240.03 69.85)
+		(at 170.18 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9061bf57-77b0-468e-89f4-aa808695a786")
+		(uuid "9823cebe-c430-4702-afea-6bd2e07c6557")
 	)
 	(junction
 		(at 83.82 52.07)
@@ -3615,6 +3869,12 @@
 		(uuid "a1eecb18-306c-4b45-b795-ed44e6ef9d1e")
 	)
 	(junction
+		(at 170.18 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba484148-51aa-44a4-8000-bce5392a289b")
+	)
+	(junction
 		(at 86.36 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3633,34 +3893,10 @@
 		(uuid "c260b986-6586-4932-8fab-efb16b95b82f")
 	)
 	(junction
-		(at 86.36 191.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c531c23f-a04f-4d9e-9788-62d90858b970")
-	)
-	(junction
 		(at 105.41 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cb7dd6ec-86fc-4025-9187-55d13f36b8a6")
-	)
-	(junction
-		(at 170.18 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cedcada8-517e-49b1-b9d6-74c362cdc79e")
-	)
-	(junction
-		(at 86.36 179.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cf44e080-db5f-4d0c-8991-356bb548f4ac")
-	)
-	(junction
-		(at 170.18 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d3cb292d-d872-47d4-b74b-26a1acce4a33")
 	)
 	(junction
 		(at 120.65 101.6)
@@ -3686,11 +3922,15 @@
 		(color 0 0 0 0)
 		(uuid "eaf9997e-7068-4342-8573-6d70ab176863")
 	)
-	(junction
-		(at 57.15 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ee82b06c-3fa4-438a-a5d8-f93b73e153e2")
+	(wire
+		(pts
+			(xy 238.76 58.42) (xy 238.76 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "028843a7-5b0b-4b48-a9d8-2d1f1f5fd4bd")
 	)
 	(wire
 		(pts
@@ -3714,36 +3954,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 71.12) (xy 207.01 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "050ac7ef-3d21-4197-993e-8beed1dfd000")
-	)
-	(wire
-		(pts
-			(xy 86.36 179.07) (xy 86.36 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05d238e0-6012-4fb6-aa66-65e1ff7cf447")
-	)
-	(wire
-		(pts
-			(xy 57.15 179.07) (xy 57.15 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "061b1499-76e5-49d5-9664-ee620226f130")
-	)
-	(wire
-		(pts
 			(xy 88.9 166.37) (xy 86.36 166.37)
 		)
 		(stroke
@@ -3754,13 +3964,43 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 82.55) (xy 212.09 82.55)
+			(xy 238.76 88.9) (xy 256.54 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0965f2bd-d4b3-4e30-b1f0-63d9ca04d482")
+		(uuid "0952c7f1-e347-47aa-9b2e-c3678c34daca")
+	)
+	(wire
+		(pts
+			(xy 157.48 115.57) (xy 157.48 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a15b384-75f2-4094-a18c-bf1b67ade913")
+	)
+	(wire
+		(pts
+			(xy 153.67 113.03) (xy 153.67 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dc5ecca-78a2-4ad6-8ba5-89cc43d10514")
+	)
+	(wire
+		(pts
+			(xy 204.47 62.23) (xy 212.09 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e02b00b-1f60-4413-9884-81f0175cbf69")
 	)
 	(wire
 		(pts
@@ -3774,13 +4014,13 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 69.85) (xy 168.91 69.85)
+			(xy 252.73 91.44) (xy 256.54 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "111a65e3-6fac-4efa-bb6c-e53c6e20c9ed")
+		(uuid "10bab37b-15d9-486f-81c9-04176da409ee")
 	)
 	(wire
 		(pts
@@ -3824,33 +4064,13 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 179.07) (xy 76.2 179.07)
+			(xy 154.94 115.57) (xy 157.48 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1bfe1e37-6a18-433a-8297-516aa0314786")
-	)
-	(wire
-		(pts
-			(xy 251.46 80.01) (xy 245.11 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c2182b6-22e7-4b68-8ac2-8af82646163d")
-	)
-	(wire
-		(pts
-			(xy 185.42 31.75) (xy 185.42 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d377095-1960-49c0-81b5-32f873a6883e")
+		(uuid "1cfb9642-2ce7-4f85-9e6e-fa733bc553f4")
 	)
 	(wire
 		(pts
@@ -3864,16 +4084,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 39.37) (xy 220.98 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1fc4f1cb-4411-41e0-9fd3-b87add98ad73")
-	)
-	(wire
-		(pts
 			(xy 127 64.77) (xy 128.27 64.77)
 		)
 		(stroke
@@ -3881,16 +4091,6 @@
 			(type default)
 		)
 		(uuid "202bb62a-dacf-4e70-8054-bf1a00502dbb")
-	)
-	(wire
-		(pts
-			(xy 204.47 80.01) (xy 229.87 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21cfee7a-8266-47d7-b7a7-501ed65bdb66")
 	)
 	(wire
 		(pts
@@ -3934,16 +4134,6 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 67.31) (xy 240.03 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2547dd08-87fb-421f-8884-5ee589ea4876")
-	)
-	(wire
-		(pts
 			(xy 101.6 100.33) (xy 101.6 101.6)
 		)
 		(stroke
@@ -3974,7 +4164,17 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 39.37) (xy 170.18 39.37)
+			(xy 204.47 82.55) (xy 252.73 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a24f5b3-98bb-446b-84f1-afa040e46fad")
+	)
+	(wire
+		(pts
+			(xy 252.73 58.42) (xy 238.76 58.42)
 		)
 		(stroke
 			(width 0)
@@ -4014,23 +4214,13 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 31.75) (xy 227.33 34.29)
+			(xy 57.15 166.37) (xy 57.15 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "310eed50-a636-4d8d-94ee-8ff15ff730fa")
-	)
-	(wire
-		(pts
-			(xy 203.2 41.91) (xy 193.04 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3460ecff-0648-4aa3-9873-0640801a0573")
+		(uuid "3423842e-1d89-48c9-9d46-366a9b0303fe")
 	)
 	(wire
 		(pts
@@ -4064,23 +4254,13 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 80.01) (xy 245.11 72.39)
+			(xy 228.6 48.26) (xy 228.6 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "38866d4b-1648-44b6-8f3d-ae58e18a3717")
-	)
-	(wire
-		(pts
-			(xy 229.87 31.75) (xy 229.87 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c269159-8e20-4cf3-9be2-93b3f69b2cd3")
+		(uuid "3702bbd3-f3a8-46fe-af18-a63bc839ec2f")
 	)
 	(wire
 		(pts
@@ -4104,13 +4284,13 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 31.75) (xy 234.95 31.75)
+			(xy 233.68 72.39) (xy 204.47 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "480674b0-34da-463d-b095-b532604c0db4")
+		(uuid "4812b65e-d4c6-4534-bd59-d4271931565e")
 	)
 	(wire
 		(pts
@@ -4134,13 +4314,23 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 55.88) (xy 220.98 55.88)
+			(xy 210.82 81.28) (xy 210.82 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "49f03267-ada4-43ee-9840-3643c06e7ac7")
+		(uuid "4c5d9c3d-348e-4e7d-9f44-1e901534d7fe")
+	)
+	(wire
+		(pts
+			(xy 154.94 110.49) (xy 154.94 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cca3ea1-52b9-43aa-8416-114e76daa63a")
 	)
 	(wire
 		(pts
@@ -4154,23 +4344,33 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 62.23) (xy 168.91 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4df87b2f-82b0-4199-b7de-1a311a3fdfc3")
-	)
-	(wire
-		(pts
-			(xy 168.91 80.01) (xy 176.53 80.01)
+			(xy 165.1 80.01) (xy 176.53 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4f2cd630-2bfe-4052-a079-a8e55c7d70d9")
+	)
+	(wire
+		(pts
+			(xy 250.19 60.96) (xy 255.27 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ff39e89-3080-4c80-9223-4359dcafa231")
+	)
+	(wire
+		(pts
+			(xy 204.47 69.85) (xy 205.74 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52c8d6cc-d67d-45c3-9619-7c4394ab92e4")
 	)
 	(wire
 		(pts
@@ -4184,23 +4384,33 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 71.12) (xy 193.04 71.12)
+			(xy 210.82 85.09) (xy 204.47 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5562fd46-7066-4b83-a599-a08305bbf3db")
+		(uuid "53ea0a29-ea08-4dbb-9c7c-52ddf785c45a")
 	)
 	(wire
 		(pts
-			(xy 177.8 113.03) (xy 157.48 113.03)
+			(xy 170.18 62.23) (xy 170.18 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "57ddfd40-ef19-4d6d-83ab-db185d9e241d")
+		(uuid "5649a991-5bbb-43f5-9412-315fe80cefa0")
+	)
+	(wire
+		(pts
+			(xy 252.73 50.8) (xy 233.68 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56e5f719-0c51-414e-b405-173fc3751aea")
 	)
 	(wire
 		(pts
@@ -4211,6 +4421,16 @@
 			(type default)
 		)
 		(uuid "58fb3969-a969-4851-a5a2-1b5427a69a4b")
+	)
+	(wire
+		(pts
+			(xy 234.95 48.26) (xy 228.6 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a0a1dae-e3c8-4050-a5ba-8120476e3ee7")
 	)
 	(wire
 		(pts
@@ -4234,33 +4454,13 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 31.75) (xy 224.79 62.23)
+			(xy 214.63 90.17) (xy 204.47 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5bc7bce1-5ccf-4564-ac8f-51caf16d55a8")
-	)
-	(wire
-		(pts
-			(xy 57.15 185.42) (xy 57.15 191.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c4da2b9-8d4c-435d-8708-a3f69077154a")
-	)
-	(wire
-		(pts
-			(xy 193.04 34.29) (xy 193.04 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5cba4c7f-b0bd-4ee3-8a08-67a7d6f4799b")
+		(uuid "5caac6e4-2e17-4dc1-8f95-558b1b8c962a")
 	)
 	(wire
 		(pts
@@ -4284,17 +4484,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 34.29) (xy 173.99 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5efdb3d2-ce30-4651-8bbb-c2831aaae284")
-	)
-	(wire
-		(pts
-			(xy 168.91 82.55) (xy 176.53 82.55)
+			(xy 165.1 82.55) (xy 176.53 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4304,13 +4494,23 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 31.75) (xy 227.33 31.75)
+			(xy 204.47 80.01) (xy 210.82 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5fd729ef-5c2d-46f1-b40e-d67a2baf6f5d")
+		(uuid "5ffbe1be-6e22-4f79-93c8-4df1136f8705")
+	)
+	(wire
+		(pts
+			(xy 233.68 50.8) (xy 233.68 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60772e03-c47b-453b-9aac-8556324384c0")
 	)
 	(wire
 		(pts
@@ -4324,6 +4524,16 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 118.11) (xy 154.94 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60cb61ed-e2de-4504-a0a7-57f24dc5c45a")
+	)
+	(wire
+		(pts
 			(xy 171.45 87.63) (xy 171.45 85.09)
 		)
 		(stroke
@@ -4331,16 +4541,6 @@
 			(type default)
 		)
 		(uuid "64203f8d-7968-4bd1-a0b6-6be07eb6abb7")
-	)
-	(wire
-		(pts
-			(xy 185.42 35.56) (xy 203.2 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "650c59df-4d35-4369-bed8-d6def57a5adf")
 	)
 	(wire
 		(pts
@@ -4364,7 +4564,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 118.11) (xy 128.27 118.11)
+			(xy 149.86 118.11) (xy 137.16 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4404,16 +4604,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 67.31) (xy 240.03 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7203f7b8-5125-4825-a3cf-6ec13a654334")
-	)
-	(wire
-		(pts
 			(xy 86.36 140.97) (xy 86.36 148.59)
 		)
 		(stroke
@@ -4434,13 +4624,13 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 74.93) (xy 219.71 74.93)
+			(xy 137.16 118.11) (xy 128.27 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "74c062a1-b651-4a7d-9daa-0b05382ee7c0")
+		(uuid "7532d0b8-748e-4402-9965-216529f44dbf")
 	)
 	(wire
 		(pts
@@ -4454,13 +4644,23 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 77.47) (xy 176.53 77.47)
+			(xy 165.1 77.47) (xy 176.53 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "75bdb44a-4580-4520-8863-3fb190d3da66")
+	)
+	(wire
+		(pts
+			(xy 210.82 81.28) (xy 256.54 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77bb5025-1d40-449d-a68b-7d49e956ef02")
 	)
 	(wire
 		(pts
@@ -4474,33 +4674,13 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 39.37) (xy 220.98 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bc1c369-94a5-47ed-a68d-4976fa0aeb27")
-	)
-	(wire
-		(pts
-			(xy 168.91 74.93) (xy 176.53 74.93)
+			(xy 165.1 74.93) (xy 176.53 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7be2291d-dbdc-40c3-9778-81be5b1a59aa")
-	)
-	(wire
-		(pts
-			(xy 261.62 128.27) (xy 261.62 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c59648a-b3ed-44cb-85e2-aba42a052cf8")
 	)
 	(wire
 		(pts
@@ -4514,13 +4694,33 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 64.77) (xy 204.47 64.77)
+			(xy 176.53 120.65) (xy 177.8 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d515593-39dc-4a9b-bd4b-358d038ece8d")
+	)
+	(wire
+		(pts
+			(xy 228.6 64.77) (xy 204.47 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7e77fcef-9d0b-411a-8f82-d72a99890237")
+	)
+	(wire
+		(pts
+			(xy 205.74 52.07) (xy 212.09 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ed776fa-8f37-48cd-8ab3-b23251120e4a")
 	)
 	(wire
 		(pts
@@ -4534,6 +4734,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 62.23) (xy 170.18 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8202b12e-f6ae-4a40-9f1a-90263b5445f2")
+	)
+	(wire
+		(pts
 			(xy 177.8 118.11) (xy 170.18 118.11)
 		)
 		(stroke
@@ -4544,23 +4754,43 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 87.63) (xy 218.44 87.63)
+			(xy 176.53 62.23) (xy 170.18 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "83444401-a6fe-4925-b5d4-b7d38617fd9c")
+		(uuid "8228c90a-58cd-4983-ba0d-05204abb8e27")
 	)
 	(wire
 		(pts
-			(xy 170.18 39.37) (xy 170.18 55.88)
+			(xy 252.73 82.55) (xy 252.73 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "842a5dae-1074-49d2-98fa-232cbe15f619")
+		(uuid "83a7a877-f75c-417c-8a47-3ea666964796")
+	)
+	(wire
+		(pts
+			(xy 205.74 69.85) (xy 205.74 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84ac9ed2-dcc9-4ccc-871c-31e9599dae11")
+	)
+	(wire
+		(pts
+			(xy 171.45 90.17) (xy 176.53 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86d126a6-d1e1-4b4a-97dc-33a4f2486eac")
 	)
 	(wire
 		(pts
@@ -4574,16 +4804,6 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 90.17) (xy 176.53 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ab547f7-cda3-457f-a4d4-706667cb845a")
-	)
-	(wire
-		(pts
 			(xy 57.15 127) (xy 57.15 133.35)
 		)
 		(stroke
@@ -4591,16 +4811,6 @@
 			(type default)
 		)
 		(uuid "8caa21d0-9792-450c-a1a5-c53314a97999")
-	)
-	(wire
-		(pts
-			(xy 207.01 69.85) (xy 207.01 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d2eea25-c2e2-4467-a577-cb9c9b66b1cd")
 	)
 	(wire
 		(pts
@@ -4614,33 +4824,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 31.75) (xy 172.72 85.09)
+			(xy 204.47 74.93) (xy 223.52 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8ec52bd4-7708-4251-9b80-b38a38803681")
-	)
-	(wire
-		(pts
-			(xy 86.36 172.72) (xy 86.36 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fc9eb74-1e49-437c-85fa-10bb211a3a0a")
-	)
-	(wire
-		(pts
-			(xy 177.8 120.65) (xy 177.8 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92abee97-bdc1-4d0e-953a-8a238745c6e4")
+		(uuid "95ecbb23-4072-4181-b664-fa4c87d2c6d0")
 	)
 	(wire
 		(pts
@@ -4654,7 +4844,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 118.11) (xy 170.18 62.23)
+			(xy 170.18 118.11) (xy 170.18 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4674,16 +4864,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 35.56) (xy 203.2 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a213360-4d00-409a-a018-d4633a5d1b7f")
-	)
-	(wire
-		(pts
 			(xy 110.49 64.77) (xy 110.49 90.17)
 		)
 		(stroke
@@ -4694,16 +4874,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 172.72) (xy 57.15 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b8df271-ed9a-4632-a3ff-049a67ec73f6")
-	)
-	(wire
-		(pts
 			(xy 120.65 90.17) (xy 120.65 92.71)
 		)
 		(stroke
@@ -4711,26 +4881,6 @@
 			(type default)
 		)
 		(uuid "9dc18b7d-e563-4348-b6a4-ea17d627bcb8")
-	)
-	(wire
-		(pts
-			(xy 240.03 67.31) (xy 240.03 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9de62bb4-1250-4f82-81bd-d25ab2b744e9")
-	)
-	(wire
-		(pts
-			(xy 171.45 64.77) (xy 171.45 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9df39463-c7cd-4309-bb18-b53e13be15c3")
 	)
 	(wire
 		(pts
@@ -4764,36 +4914,6 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 34.29) (xy 234.95 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9a4d1ba-3e3c-4ed1-b813-682c61df9083")
-	)
-	(wire
-		(pts
-			(xy 157.48 113.03) (xy 157.48 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac0c14a1-2f8a-4145-a826-7484392a02a9")
-	)
-	(wire
-		(pts
-			(xy 204.47 85.09) (xy 214.63 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "accadf52-f482-426a-827f-53870b7c7bdb")
-	)
-	(wire
-		(pts
 			(xy 83.82 52.07) (xy 57.15 52.07)
 		)
 		(stroke
@@ -4814,17 +4934,17 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 128.27) (xy 261.62 128.27)
+			(xy 153.67 113.03) (xy 177.8 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b0a066d4-ce11-42b0-a007-50a9e28c74f3")
+		(uuid "b1c85535-1d6e-4785-93cb-25d2183dbf38")
 	)
 	(wire
 		(pts
-			(xy 168.91 72.39) (xy 176.53 72.39)
+			(xy 165.1 72.39) (xy 176.53 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4834,43 +4954,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 85.09) (xy 176.53 85.09)
+			(xy 173.99 85.09) (xy 176.53 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b755f3cc-eff7-44b8-a0bb-21b8de87edbe")
-	)
-	(wire
-		(pts
-			(xy 204.47 90.17) (xy 223.52 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b84fc51b-c489-4c23-b72d-2bc8671ab077")
-	)
-	(wire
-		(pts
-			(xy 172.72 31.75) (xy 185.42 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8e98bed-1dbc-45f2-8d0c-046aac2f151b")
-	)
-	(wire
-		(pts
-			(xy 154.94 110.49) (xy 154.94 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b920753e-e56d-4907-9307-a825a41048b7")
+		(uuid "bb0ebb98-ef1e-4e99-9891-1ed0b3f99a88")
 	)
 	(wire
 		(pts
@@ -4881,16 +4971,6 @@
 			(type default)
 		)
 		(uuid "bb98cc7e-edad-44a6-91d2-bedb6fbf6718")
-	)
-	(wire
-		(pts
-			(xy 64.77 185.42) (xy 76.2 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bd26ebbb-d9fc-44f8-bb0d-8a1456a9b6f5")
 	)
 	(wire
 		(pts
@@ -4914,26 +4994,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 41.91) (xy 234.95 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0cedc81-65e7-47de-bdb8-4e147b43a404")
-	)
-	(wire
-		(pts
-			(xy 224.79 62.23) (xy 204.47 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c14b7bd4-23e0-4aed-b128-9d26c1c55b72")
-	)
-	(wire
-		(pts
 			(xy 86.36 120.65) (xy 86.36 127)
 		)
 		(stroke
@@ -4941,16 +5001,6 @@
 			(type default)
 		)
 		(uuid "c524f02a-a0fe-4789-8841-9c9b2da24fae")
-	)
-	(wire
-		(pts
-			(xy 193.04 41.91) (xy 193.04 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c687f0f3-56e6-43c0-970e-e5f8a4b40da0")
 	)
 	(wire
 		(pts
@@ -4971,6 +5021,16 @@
 			(type default)
 		)
 		(uuid "c9704be0-369c-4b51-a529-b35f137ba026")
+	)
+	(wire
+		(pts
+			(xy 204.47 77.47) (xy 214.63 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f14e31-df96-46d8-9d8e-fbd0784a1cdd")
 	)
 	(wire
 		(pts
@@ -5004,23 +5064,13 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 34.29) (xy 193.04 34.29)
+			(xy 204.47 87.63) (xy 215.9 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d1573b1a-5566-4d02-8a00-a00bb906ed35")
-	)
-	(wire
-		(pts
-			(xy 182.88 71.12) (xy 182.88 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d16d9616-18db-414e-8689-7aab82904da7")
+		(uuid "d3266182-2373-4b6e-8627-1cea470f1cfa")
 	)
 	(wire
 		(pts
@@ -5034,33 +5084,23 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 185.42) (xy 86.36 191.77)
+			(xy 86.36 166.37) (xy 86.36 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d5d52c8e-c106-4274-804f-9225399d072d")
+		(uuid "d65ce889-0fa9-4d2c-98a6-f509f953611f")
 	)
 	(wire
 		(pts
-			(xy 204.47 77.47) (xy 224.79 77.47)
+			(xy 215.9 87.63) (xy 215.9 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dcae1217-2c8c-4828-938f-9b91ee26dcd5")
-	)
-	(wire
-		(pts
-			(xy 170.18 62.23) (xy 176.53 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd77c29f-88bf-4c14-980e-a56f05f34fa4")
+		(uuid "d6c64d6e-8e50-408e-8df9-63c2287abcd8")
 	)
 	(wire
 		(pts
@@ -5074,23 +5114,23 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 69.85) (xy 207.01 69.85)
+			(xy 238.76 96.52) (xy 170.18 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e1f17132-d06e-4cad-95f6-86062b62d667")
+		(uuid "df9b11c0-a74a-4d33-8051-23981dbcc792")
 	)
 	(wire
 		(pts
-			(xy 64.77 191.77) (xy 76.2 191.77)
+			(xy 165.1 62.23) (xy 165.1 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e20162b5-ef1f-4e74-b2e1-3e30c7eb5e73")
+		(uuid "e1a8e29d-bbec-4fe2-9190-d0b2e03f37e0")
 	)
 	(wire
 		(pts
@@ -5104,17 +5144,17 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 62.23) (xy 170.18 62.23)
+			(xy 204.47 67.31) (xy 205.74 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e26b4684-83e0-4fdb-b7b4-176cbd3be9d6")
+		(uuid "e48dee24-54a2-4da6-9820-18242fe53023")
 	)
 	(wire
 		(pts
-			(xy 171.45 85.09) (xy 168.91 85.09)
+			(xy 171.45 85.09) (xy 165.1 85.09)
 		)
 		(stroke
 			(width 0)
@@ -5124,33 +5164,33 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 72.39) (xy 245.11 72.39)
+			(xy 252.73 53.34) (xy 234.95 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e793c1ef-6170-4299-9a88-bed34231a8a3")
+		(uuid "ea396ac3-f728-40a3-a476-79f8af257221")
 	)
 	(wire
 		(pts
-			(xy 251.46 69.85) (xy 240.03 69.85)
+			(xy 234.95 53.34) (xy 234.95 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e897ac69-9a1e-42a3-8ba4-b569216a1512")
+		(uuid "ec9ad775-c1aa-4e62-8cce-3c7fd369d311")
 	)
 	(wire
 		(pts
-			(xy 182.88 64.77) (xy 176.53 64.77)
+			(xy 238.76 88.9) (xy 238.76 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ecdcb27f-03c6-4937-980c-ed031d9d7815")
+		(uuid "ec9cee13-bcf8-48af-92c8-14d23c00bc39")
 	)
 	(wire
 		(pts
@@ -5184,13 +5224,23 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 55.88) (xy 170.18 62.23)
+			(xy 252.73 83.82) (xy 256.54 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f1ccbbc7-f63a-4044-bfcf-94254732dd8f")
+		(uuid "f6eae7d0-7825-4590-860f-83f6eec8c05c")
+	)
+	(wire
+		(pts
+			(xy 166.37 69.85) (xy 165.1 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7d6803b-7760-41a3-9e4c-654ae0b3d707")
 	)
 	(wire
 		(pts
@@ -5214,6 +5264,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 67.31) (xy 212.09 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9a28c1c-abd5-4519-a643-cdd6739712c6")
+	)
+	(wire
+		(pts
 			(xy 83.82 52.07) (xy 105.41 52.07)
 		)
 		(stroke
@@ -5221,26 +5281,6 @@
 			(type default)
 		)
 		(uuid "fa5182d1-3402-4413-9328-7d3afe99537a")
-	)
-	(wire
-		(pts
-			(xy 193.04 31.75) (xy 203.2 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fafe9a00-9d8e-4547-af58-da9b63fc7982")
-	)
-	(wire
-		(pts
-			(xy 176.53 64.77) (xy 171.45 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbfe0f3c-44e7-4bb5-b0d7-e1d088af83d2")
 	)
 	(wire
 		(pts
@@ -5263,7 +5303,7 @@
 		(uuid "ff77caaf-6ddf-4870-ba22-bc9f1179e297")
 	)
 	(label "Col4"
-		(at 212.09 82.55 0)
+		(at 215.9 86.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5273,7 +5313,7 @@
 		(uuid "0bd7ad5e-4572-42d9-ac19-68f4feabfe02")
 	)
 	(label "Row3"
-		(at 229.87 80.01 0)
+		(at 223.52 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5293,7 +5333,7 @@
 		(uuid "35a75be1-70f3-434a-bf2f-e4d92a1ad7d4")
 	)
 	(label "Col1"
-		(at 223.52 90.17 0)
+		(at 171.45 90.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5323,7 +5363,7 @@
 		(uuid "72be4a91-42a8-4f72-b41d-bf3f30804288")
 	)
 	(label "Row1"
-		(at 219.71 74.93 0)
+		(at 210.82 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5332,18 +5372,8 @@
 		)
 		(uuid "79d4ca31-0876-445e-b0ec-476e6f86d8bd")
 	)
-	(label "GND"
-		(at 223.52 67.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9e6ab262-9d07-43ab-bca0-007606a2b3df")
-	)
 	(label "Col3"
-		(at 214.63 85.09 0)
+		(at 214.63 90.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5353,7 +5383,7 @@
 		(uuid "b9deb0b0-ed6f-4eba-b7cc-2a6f5f8d5680")
 	)
 	(label "Col2"
-		(at 218.44 87.63 0)
+		(at 173.99 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5393,7 +5423,7 @@
 		(uuid "cf4728ab-aff3-4b98-a92d-c3ba59e69d62")
 	)
 	(label "Row2"
-		(at 224.79 77.47 0)
+		(at 214.63 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5416,73 +5446,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 160.02 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "04540396-5735-42e0-95f1-dd861e126dd4")
 		(property "Reference" "R7"
 			(at 60.96 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 35.814 159.004 0)
+		(property "Value" "33R"
+			(at 60.96 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -5501,174 +5537,21 @@
 		)
 	)
 	(symbol
-		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
-		(at 60.96 191.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0a21832c-a66c-4491-a050-d79c71eb5dd4")
-		(property "Reference" "R12"
-			(at 60.96 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 37.084 189.992 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "RC0402FR-0733RL:R0402"
-			(at 60.96 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "RC0402FR-0733RL"
-			(at 60.96 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a9e6af84-e812-4f2a-84fb-f7cf7ffaf70e")
-		)
-		(pin "1"
-			(uuid "121ae0a4-8f96-41f4-b12e-9446bfff4e18")
-		)
-		(instances
-			(project "Macro_Keyboard_Circuit"
-				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
-					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "HSMW_C280:HSMW-C280")
-		(at 76.2 179.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0d3eac89-5212-47a3-b61a-2dc687851b31")
-		(property "Reference" "LED10"
-			(at 111.76 179.07 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "HSMW-C280"
-			(at 99.568 179.07 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
-			(at 76.2 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "HSMW-C280"
-			(at 76.2 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "44752739-e823-4628-9de0-a470296df723")
-		)
-		(pin "2"
-			(uuid "e3b36e6d-0243-4375-850a-870ca24f4b55")
-		)
-		(instances
-			(project "Macro_Keyboard_Circuit"
-				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
-					(reference "LED10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 78.74 43.18 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d87092e-6896-461a-9c4d-1a5a94d458bf")
 		(property "Reference" "SW9"
 			(at 78.74 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5677,6 +5560,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 78.74 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5685,29 +5570,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 78.74 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 78.74 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 78.74 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -5726,16 +5617,98 @@
 		)
 	)
 	(symbol
-		(lib_id "HSMW_C280:HSMW-C280")
-		(at 76.2 113.03 0)
+		(lib_id "power:GND")
+		(at 176.53 64.77 270)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1118f389-424f-4891-b1e8-171c451ec39e")
+		(property "Reference" "#PWR03"
+			(at 170.18 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.292 66.802 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 176.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c06df29a-2f21-4ed6-99c2-6c104c296dbb")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "HSMW_C280:HSMW-C280")
+		(at 76.2 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "11921b30-687e-4bd8-a337-c72599775de5")
 		(property "Reference" "LED1"
 			(at 110.744 112.776 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -5744,6 +5717,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 98.806 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -5752,31 +5727,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5786,9 +5767,88 @@
 			(uuid "9a427044-e5fe-456d-aadc-4ce184d0e364")
 		)
 		(instances
-			(project ""
+			(project "Macro_Keyboard_Circuit"
 				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
 					(reference "LED1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 212.09 67.31 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "157e9b4f-0ddc-4879-a16c-ba12f74dc8b8")
+		(property "Reference" "#PWR01"
+			(at 218.44 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 215.9 67.3099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 212.09 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 212.09 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ee0efe5-6dde-453a-90ae-1b20cf8326c9")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -5798,73 +5858,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 148.59 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "1cd5d3cb-1fdd-4281-b2b4-f3bc08892d8e")
 		(property "Reference" "R6"
 			(at 60.96 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 35.814 148.59 0)
+		(property "Value" "33R"
+			(at 60.96 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -5883,85 +5949,20 @@
 		)
 	)
 	(symbol
-		(lib_id "HSMW_C280:HSMW-C280")
-		(at 76.2 191.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1f6d7402-1795-4988-9c4a-45d5292b2067")
-		(property "Reference" "LED12"
-			(at 112.014 191.77 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "HSMW-C280"
-			(at 100.076 191.77 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
-			(at 76.2 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "HSMW-C280"
-			(at 76.2 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7b1c26c3-820e-46e1-af7d-8bdf9c5a0bc7")
-		)
-		(pin "2"
-			(uuid "ce6669be-a42e-47ab-86a1-cba36262a964")
-		)
-		(instances
-			(project "Macro_Keyboard_Circuit"
-				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
-					(reference "LED12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Diode:1N4148W")
 		(at 120.65 48.26 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "20c68497-63f8-494a-b21a-eb59b15b0a13")
 		(property "Reference" "D3"
 			(at 123.19 46.9899 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5971,6 +5972,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 122.936 48.768 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5980,47 +5983,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 125.095 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 120.65 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 120.65 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 120.65 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 120.65 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6042,73 +6055,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 172.72 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "242ebb3e-f5ca-493f-b4e2-d8b838457956")
 		(property "Reference" "R9"
 			(at 60.96 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 37.084 170.942 0)
+		(property "Value" "33R"
+			(at 60.96 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6130,73 +6149,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 120.65 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "2885c17f-7506-4b70-8829-6904cd9e3ffb")
 		(property "Reference" "R2"
 			(at 60.96 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 35.814 119.634 0)
+		(property "Value" "33R"
+			(at 60.96 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6218,13 +6243,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 160.02 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "30e47ec3-78d1-48d3-b9f6-bc6a490097d5")
 		(property "Reference" "LED7"
 			(at 111.252 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -6233,6 +6262,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 99.568 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -6241,31 +6272,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6287,13 +6324,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 138.43 72.39 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "424b3ea5-22b4-495a-ae4e-997ba6e877af")
 		(property "Reference" "D8"
 			(at 140.97 71.1199 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6303,6 +6344,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 140.716 72.898 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6312,47 +6355,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 142.875 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 138.43 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 138.43 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 138.43 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 138.43 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6374,73 +6427,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 166.37 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "43cb5a02-f112-4cd2-96c6-94e02a33c863")
 		(property "Reference" "R8"
 			(at 60.96 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 36.83 166.116 0)
+		(property "Value" "33R"
+			(at 60.96 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6462,14 +6521,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 132.08 40.64 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4486d573-067b-4f76-b0c3-52c2cb03e381")
 		(property "Reference" "SW12"
 			(at 132.08 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6478,6 +6541,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 132.08 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6486,29 +6551,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 132.08 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 132.08 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 132.08 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6530,13 +6601,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 127 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "4b3e8432-f3a8-43a9-951e-069808221ace")
 		(property "Reference" "LED3"
 			(at 111.252 126.746 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -6545,6 +6620,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 99.568 127 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -6553,31 +6630,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6599,14 +6682,18 @@
 		(lib_id "KY-040:KY-040")
 		(at 187.96 115.57 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c4bd360-e60b-45d5-8371-01931cf7b23a")
 		(property "Reference" "U1"
 			(at 194.31 114.2999 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6616,6 +6703,8 @@
 		)
 		(property "Value" "KY-040"
 			(at 194.31 116.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6625,110 +6714,132 @@
 		)
 		(property "Footprint" "KY_040:KY_040_PORT"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MF" "Joy-IT"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Description_1" "KY-5.0-4P Green(RAL6018/T) ; CONTACT WITH TIN PLATED MARK"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Package" "Package"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Price" "None"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=snap"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "MP" "KY-040"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Availability" "Not in stock"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=eda"
 			(at 187.96 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "VCC"
@@ -6747,7 +6858,7 @@
 			(uuid "a51190bf-5f95-4ad6-aa65-2193d240e341")
 		)
 		(instances
-			(project ""
+			(project "Macro_Keyboard_Circuit"
 				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
 					(reference "U1")
 					(unit 1)
@@ -6759,14 +6870,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 80.01 66.04 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "501caf6a-4e0f-4669-beac-ad9dbe853daf")
 		(property "Reference" "SW5"
 			(at 80.01 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6775,6 +6890,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 80.01 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6783,29 +6900,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 80.01 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 80.01 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 80.01 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6827,13 +6950,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 83.82 48.26 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "50ad5fcd-64dd-40a1-806f-c437cf9cc30a")
 		(property "Reference" "D1"
 			(at 86.36 46.9899 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6843,6 +6970,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 86.106 48.768 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6852,47 +6981,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 88.265 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 83.82 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 83.82 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 83.82 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 83.82 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6914,13 +7053,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 133.35 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5e7417eb-9494-4d69-8187-884b93f94a12")
 		(property "Reference" "LED4"
 			(at 111.506 133.604 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -6929,6 +7072,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 100.076 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -6937,31 +7082,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6983,14 +7134,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 96.52 64.77 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6210cba4-e38f-4728-8ba5-95a9a64c7206")
 		(property "Reference" "SW6"
 			(at 96.52 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6999,6 +7154,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 96.52 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7007,29 +7164,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 96.52 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 96.52 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 96.52 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7048,86 +7211,21 @@
 		)
 	)
 	(symbol
-		(lib_id "HSMW_C280:HSMW-C280")
-		(at 76.2 185.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6f5429d3-7fe1-4a71-a0bd-82404aef01a7")
-		(property "Reference" "LED11"
-			(at 111.76 185.42 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "HSMW-C280"
-			(at 99.568 185.42 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
-			(at 76.2 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "HSMW-C280"
-			(at 76.2 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d78e7d82-426e-4981-9f07-c49fc2df5dfd")
-		)
-		(pin "2"
-			(uuid "32c3bb99-6fa8-4a3e-8bce-d5ad0e4c5c27")
-		)
-		(instances
-			(project "Macro_Keyboard_Circuit"
-				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
-					(reference "LED11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 133.35 64.77 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6fbc085d-16e0-45d2-b412-7b0e0cde0279")
 		(property "Reference" "SW8"
 			(at 133.35 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7136,6 +7234,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 133.35 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7144,29 +7244,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 133.35 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 133.35 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 133.35 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7185,17 +7291,99 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 115.57 64.77 0)
+		(lib_id "power:GND")
+		(at 252.73 91.44 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71e0ad90-3b49-48a3-bca7-663f24683786")
+		(property "Reference" "#PWR07"
+			(at 252.73 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 252.73 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 252.73 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 252.73 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9dfb1d33-1e0e-425d-87bd-eed0384c4b76")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 115.57 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "76197500-0ebc-438b-a6b8-2efef0564d9b")
 		(property "Reference" "SW7"
 			(at 115.57 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7204,6 +7392,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 115.57 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7212,29 +7402,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 115.57 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 115.57 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 115.57 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7256,13 +7452,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 85.09 72.39 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "783cb6f7-2c69-4483-adde-7b60be2ad8d6")
 		(property "Reference" "D5"
 			(at 87.63 71.1199 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7272,6 +7472,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 87.376 72.898 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7281,47 +7483,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 89.535 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 85.09 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 85.09 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 85.09 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 85.09 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7343,73 +7555,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 133.35 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "78a4e1c4-c59c-43e7-af89-7e84f92f7d6e")
 		(property "Reference" "R4"
 			(at 60.96 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 37.084 131.572 0)
+		(property "Value" "33R"
+			(at 60.96 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7431,14 +7649,18 @@
 		(lib_id "SparkFun-Board:ProMicroC")
 		(at 179.07 59.69 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ad2c1dd-fade-4a58-b85b-7315f81002b9")
 		(property "Reference" "U2"
 			(at 188.595 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7447,6 +7669,8 @@
 		)
 		(property "Value" "Adafruit KB2040"
 			(at 188.595 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7455,29 +7679,35 @@
 		)
 		(property "Footprint" "SparkFun-Board:ProMicroC"
 			(at 210.566 108.458 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.sparkfun.com/products/15795"
 			(at 178.562 112.268 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 179.07 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "9"
@@ -7565,73 +7795,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 113.03 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "82f7eb9f-10f7-44e5-bb9a-b9dbdca40e01")
 		(property "Reference" "R1"
 			(at 60.96 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 35.814 113.03 0)
+		(property "Value" "33R"
+			(at 60.96 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7641,7 +7877,7 @@
 			(uuid "4b2a059a-a8b8-4dcf-af1a-84c25e98d046")
 		)
 		(instances
-			(project ""
+			(project "Macro_Keyboard_Circuit"
 				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
 					(reference "R1")
 					(unit 1)
@@ -7653,13 +7889,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 137.16 48.26 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "85434607-0a3a-40e4-932b-e3f463b0d1d9")
 		(property "Reference" "D4"
 			(at 139.7 46.9899 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7669,6 +7909,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 139.446 48.768 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7678,47 +7920,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 141.605 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 137.16 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 137.16 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 137.16 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 137.16 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7740,13 +7992,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 120.65 96.52 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "86d18c3f-1156-4781-a6a8-8e6317ee96b7")
 		(property "Reference" "D10"
 			(at 123.19 95.2499 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7756,6 +8012,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 122.936 97.028 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7765,47 +8023,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 125.095 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7824,88 +8092,78 @@
 		)
 	)
 	(symbol
-		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
-		(at 60.96 179.07 0)
+		(lib_id "power:GND")
+		(at 166.37 69.85 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
-		(uuid "98b6e0de-4248-4349-a453-d1dce597b535")
-		(property "Reference" "R10"
-			(at 60.96 173.99 0)
+		(uuid "985ac3f3-6c57-4e7d-a9ee-ff8cfae737c9")
+		(property "Reference" "#PWR02"
+			(at 172.72 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 35.814 178.054 0)
+		(property "Value" "GND"
+			(at 165.608 67.818 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "RC0402FR-0733RL:R0402"
-			(at 60.96 179.07 0)
+		(property "Footprint" ""
+			(at 166.37 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 179.07 0)
+			(at 166.37 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 60.96 179.07 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 166.37 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
-		)
-		(property "MPN" "RC0402FR-0733RL"
-			(at 60.96 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "14c927a5-70f6-4875-a683-dbf2e9e5abfa")
 		)
 		(pin "1"
-			(uuid "dc7f0d1c-a4c1-47b4-815e-489dfcd1f71a")
+			(uuid "6dc25378-1f36-405e-804f-f6bc20570692")
 		)
 		(instances
 			(project "Macro_Keyboard_Circuit"
 				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
-					(reference "R10")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -7915,13 +8173,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 148.59 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "98c35da3-4dfd-427e-b987-c0099b744c83")
 		(property "Reference" "LED6"
 			(at 110.744 148.336 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7930,6 +8192,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 98.806 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7938,31 +8202,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7982,16 +8252,20 @@
 	)
 	(symbol
 		(lib_id "OSTTC082162:OSTTC082162")
-		(at 168.91 85.09 180)
+		(at 165.1 85.09 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ea6651e-314f-47fa-bc70-b4133c114f6d")
 		(property "Reference" "J1"
-			(at 160.02 59.69 0)
+			(at 156.21 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7999,7 +8273,9 @@
 			)
 		)
 		(property "Value" "OSTTC082162"
-			(at 160.02 62.23 0)
+			(at 156.21 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -8007,32 +8283,38 @@
 			)
 		)
 		(property "Footprint" "OSTTC082162:CONN8_OSTTC082162_SHT"
-			(at 168.91 85.09 0)
+			(at 165.1 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "OSTTC082162"
-			(at 168.91 85.09 0)
+			(at 165.1 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
-			(at 168.91 85.09 0)
+			(at 165.1 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8060,7 +8342,7 @@
 			(uuid "7a44f4e6-cc66-46c7-9e2d-53ecc722de1a")
 		)
 		(instances
-			(project ""
+			(project "Macro_Keyboard_Circuit"
 				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
 					(reference "J1")
 					(unit 1)
@@ -8072,13 +8354,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 101.6 72.39 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a0921ef8-32d0-4eb5-8ca5-8c34e1447980")
 		(property "Reference" "D6"
 			(at 104.14 71.1199 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8088,6 +8374,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 103.886 72.898 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8097,47 +8385,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 106.045 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 101.6 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 101.6 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 101.6 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 101.6 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8159,14 +8457,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 78.74 90.17 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3ae1bb8-b80d-468e-ace9-f726a26ac17a")
 		(property "Reference" "SW1"
 			(at 78.74 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8175,6 +8477,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 78.74 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8183,29 +8487,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 78.74 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 78.74 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 78.74 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8227,14 +8537,18 @@
 		(lib_id "PRT_16766:PRT-16766")
 		(at 146.05 106.68 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4a7ed6e-b305-44d8-bd54-3b5155fe8dd1")
 		(property "Reference" "J2"
 			(at 161.29 125.7299 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -8244,6 +8558,8 @@
 		)
 		(property "Value" "PRT-16766"
 			(at 161.29 128.2699 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -8253,31 +8569,37 @@
 		)
 		(property "Footprint" "PRT_16766:CONN_BM04B-SRSS-TB_SPK"
 			(at 157.48 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "PRT-16766"
 			(at 157.48 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 146.05 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8293,7 +8615,7 @@
 			(uuid "b1c9a1fd-c846-4e1c-ace2-deed649905c0")
 		)
 		(instances
-			(project ""
+			(project "Macro_Keyboard_Circuit"
 				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
 					(reference "J2")
 					(unit 1)
@@ -8305,14 +8627,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 115.57 90.17 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a74e565d-398b-4cf5-8863-1405dba4a0cb")
 		(property "Reference" "SW3"
 			(at 115.57 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8321,6 +8647,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 115.57 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8329,29 +8657,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 115.57 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 115.57 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 115.57 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8371,16 +8705,20 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 251.46 74.93 270)
+		(at 212.09 57.15 270)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "adb46f4b-3b9c-49a0-8f62-f0ee6fe83a67")
 		(property "Reference" "Layer_SW1"
-			(at 255.27 73.6599 90)
+			(at 215.9 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8389,7 +8727,9 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 255.27 76.1999 90)
+			(at 215.9 58.4199 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8398,30 +8738,36 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
-			(at 256.54 74.93 0)
+			(at 217.17 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 256.54 74.93 0)
+		(property "Datasheet" ""
+			(at 217.17 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 251.46 74.93 0)
+			(at 212.09 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8443,14 +8789,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 96.52 90.17 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b038a3f7-456d-481a-8a67-44a7d11ba294")
 		(property "Reference" "SW2"
 			(at 96.52 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8459,6 +8809,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 96.52 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8467,29 +8819,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 96.52 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 96.52 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 96.52 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8511,73 +8869,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 127 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b1ffb650-ef27-4040-8624-aa90778e3052")
 		(property "Reference" "R3"
 			(at 60.96 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 36.83 126.746 0)
+		(property "Value" "33R"
+			(at 60.96 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8599,13 +8963,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 140.97 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b7d381ad-8597-4d4e-a795-571faf7a84a4")
 		(property "Reference" "LED5"
 			(at 111.506 140.462 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -8614,6 +8982,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 100.076 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -8622,31 +8992,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8668,13 +9044,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 83.82 96.52 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b9246b4b-7045-44d2-81cb-41ee0f9eb4c2")
 		(property "Reference" "D12"
 			(at 86.36 95.2499 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8684,6 +9064,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 86.106 97.028 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8693,47 +9075,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 88.265 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 83.82 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 83.82 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 83.82 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 83.82 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8755,73 +9147,79 @@
 		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
 		(at 60.96 140.97 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c7e0cd4f-3471-4006-97cf-17f94cd0944a")
 		(property "Reference" "R5"
 			(at 60.96 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 37.084 139.192 0)
+		(property "Value" "33R"
+			(at 60.96 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Footprint" "RC0402FR-0733RL:R0402"
 			(at 60.96 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 60.96 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 60.96 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MPN" "RC0402FR-0733RL"
 			(at 60.96 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8843,14 +9241,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 132.08 90.17 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cab3633f-faf8-4874-85ca-e2a01d961fac")
 		(property "Reference" "SW4"
 			(at 132.08 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8859,6 +9261,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 132.08 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8867,29 +9271,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 132.08 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 132.08 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 132.08 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8911,13 +9321,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 120.65 72.39 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d191ab26-ede3-4b5c-8a5d-1af336ffbfe9")
 		(property "Reference" "D7"
 			(at 123.19 71.1199 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8927,6 +9341,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 122.936 72.898 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8936,47 +9352,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 125.095 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 120.65 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 120.65 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 120.65 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 120.65 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8995,105 +9421,21 @@
 		)
 	)
 	(symbol
-		(lib_id "RC0402FR-0733RL:SMD-RES-33R-1_-1_16W_0402_")
-		(at 60.96 185.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d45b52a3-a406-41af-b93b-d953c39971a5")
-		(property "Reference" "R11"
-			(at 60.96 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SMD-RES-33R-1_-1_16W_0402_"
-			(at 36.83 185.166 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "RC0402FR-0733RL:R0402"
-			(at 60.96 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "RC0402FR-0733RL"
-			(at 60.96 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "VALUE" "33R"
-			(at 60.96 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1cef3d11-0df9-44d6-a9b8-bc08cc3303dc")
-		)
-		(pin "1"
-			(uuid "7c3a0c68-691b-450e-87b5-a0f24da6fe71")
-		)
-		(instances
-			(project "Macro_Keyboard_Circuit"
-				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 100.33 41.91 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db5dec21-2b96-4a06-88c1-2ece2638e671")
 		(property "Reference" "SW10"
 			(at 100.33 34.29 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9102,6 +9444,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 100.33 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9110,29 +9454,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 100.33 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 100.33 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 100.33 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9154,13 +9504,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 105.41 48.26 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "dc13e633-395c-4c26-a491-91f1332ce187")
 		(property "Reference" "D2"
 			(at 107.95 45.7199 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9170,6 +9524,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 107.696 47.498 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9179,47 +9535,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 109.855 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 105.41 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 105.41 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 105.41 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 105.41 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9241,13 +9607,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 137.16 96.52 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e15d0c2b-7d6a-4a4d-880a-b23a67901e16")
 		(property "Reference" "D9"
 			(at 139.7 95.2499 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9257,6 +9627,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 139.446 97.028 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9266,47 +9638,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 141.605 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 137.16 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 137.16 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 137.16 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 137.16 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9328,14 +9710,18 @@
 		(lib_id "Switch:SW_Push")
 		(at 115.57 40.64 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e6b56ae4-6f5d-4e07-af09-ed23060e9380")
 		(property "Reference" "SW11"
 			(at 115.57 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9344,6 +9730,8 @@
 		)
 		(property "Value" "SW_Push"
 			(at 115.57 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9352,29 +9740,35 @@
 		)
 		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
 			(at 115.57 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 115.57 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9396,13 +9790,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 166.37 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e8ec5458-9b55-417d-843a-97a17a690f1b")
 		(property "Reference" "LED8"
 			(at 111.252 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -9411,6 +9809,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 99.568 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -9419,31 +9819,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9465,13 +9871,17 @@
 		(lib_id "HSMW_C280:HSMW-C280")
 		(at 76.2 120.65 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e9e06dda-f920-47bb-8646-1fce7d1ada77")
 		(property "Reference" "LED2"
 			(at 110.998 120.904 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -9480,6 +9890,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 99.568 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -9488,31 +9900,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9531,17 +9949,177 @@
 		)
 	)
 	(symbol
-		(lib_id "KY-040:KY-040")
-		(at 245.11 36.83 0)
+		(lib_id "power:GND")
+		(at 176.53 120.65 270)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eb05cdc6-7d1d-4bb3-a1ff-ccded2ac422c")
+		(property "Reference" "#PWR04"
+			(at 170.18 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.292 122.682 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 176.53 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "17df7ef2-7c32-40dd-9a3c-c13b9035b723")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0f64dc9-7b02-4afb-83db-31f4bf52b806")
+		(property "Reference" "#PWR08"
+			(at 137.16 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32fcd437-8c66-4a08-9a4b-72e1844eb5a8")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "KY-040:KY-040")
+		(at 266.7 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f219eb46-1eac-4883-aa38-80972f48895a")
 		(property "Reference" "U4"
-			(at 251.46 35.5599 0)
+			(at 273.05 85.0899 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9550,7 +10128,9 @@
 			)
 		)
 		(property "Value" "KY-040"
-			(at 251.46 38.0999 0)
+			(at 273.05 87.6299 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9559,111 +10139,133 @@
 			)
 		)
 		(property "Footprint" "KY_040:KY_040_PORT"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MF" "Joy-IT"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Description_1" "KY-5.0-4P Green(RAL6018/T) ; CONTACT WITH TIN PLATED MARK"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Package" "Package"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Price" "None"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=snap"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "MP" "KY-040"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=eda"
-			(at 245.11 36.83 0)
+			(at 266.7 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "VCC"
@@ -9694,13 +10296,17 @@
 		(lib_id "Diode:1N4148W")
 		(at 101.6 96.52 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "f251907a-2c00-48da-a693-78d8df1f9d76")
 		(property "Reference" "D11"
 			(at 104.14 95.2499 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9710,6 +10316,8 @@
 		)
 		(property "Value" "1N4148W"
 			(at 103.886 97.028 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9719,47 +10327,57 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 106.045 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
 			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 101.6 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9778,16 +10396,99 @@
 		)
 	)
 	(symbol
-		(lib_id "HSMW_C280:HSMW-C280")
-		(at 76.2 172.72 0)
+		(lib_id "power:GND")
+		(at 250.19 60.96 270)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f436e930-1949-43f3-9692-69ec3c365dc4")
+		(property "Reference" "#PWR05"
+			(at 243.84 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 245.9382 60.9599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 250.19 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f67a206a-6b80-437f-be02-5364d8f0bffb")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "HSMW_C280:HSMW-C280")
+		(at 76.2 172.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "f5737b90-8dca-47c9-ba89-a561c1e71183")
 		(property "Reference" "LED9"
 			(at 111.506 172.974 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -9796,6 +10497,8 @@
 		)
 		(property "Value" "HSMW-C280"
 			(at 100.076 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -9804,31 +10507,37 @@
 		)
 		(property "Footprint" "HSMW_C280:LED_HSMW-C280_BRA"
 			(at 76.2 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "HSMW-C280"
 			(at 76.2 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 76.2 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9847,17 +10556,100 @@
 		)
 	)
 	(symbol
-		(lib_id "KY-040:KY-040")
-		(at 213.36 36.83 0)
+		(lib_id "power:GND")
+		(at 205.74 52.07 270)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fdf91bfd-7272-4819-abdc-9c899ca0e5a1")
+		(property "Reference" "#PWR06"
+			(at 199.39 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 201.93 52.0699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 205.74 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f0622cea-bc49-456a-95f0-ff32e15ad307")
+		)
+		(instances
+			(project "Macro_Keyboard_Circuit"
+				(path "/060bae83-e3d9-43fa-98fe-99811f977cfd"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "KY-040:KY-040")
+		(at 262.89 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fdfc3387-f792-4836-968d-15e679055520")
 		(property "Reference" "U3"
-			(at 219.71 35.5599 0)
+			(at 269.24 54.6099 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9866,7 +10658,9 @@
 			)
 		)
 		(property "Value" "KY-040"
-			(at 219.71 38.0999 0)
+			(at 269.24 57.1499 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9875,111 +10669,133 @@
 			)
 		)
 		(property "Footprint" "KY_040:KY_040_PORT"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "MF" "Joy-IT"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Description_1" "KY-5.0-4P Green(RAL6018/T) ; CONTACT WITH TIN PLATED MARK"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Package" "Package"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Price" "None"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=snap"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "MP" "KY-040"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/KY-040/Joy-IT/view-part/?ref=eda"
-			(at 213.36 36.83 0)
+			(at 262.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify bottom)
-				(hide yes)
 			)
 		)
 		(pin "VCC"
