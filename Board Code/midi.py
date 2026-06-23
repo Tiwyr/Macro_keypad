@@ -4,14 +4,19 @@ from adafruit_midi.note_on import NoteOn
 from adafruit_midi.note_off import NoteOff
 
 from kmk.extensions import Extension
-from kmk.keys import make_argumented_key
+from kmk.keys import Key, make_argumented_key
 
-def midi_key_validator(note):
-    return MidiNoteMeta(note)
 
 class MidiNoteMeta:
     def __init__(self, note):
         self.note = note
+
+
+class MidiNoteKey(Key):
+    def __init__(self, note, **kwargs):
+        super().__init__(**kwargs)
+        self.meta = MidiNoteMeta(note)
+
 
 class Midi(Extension):
 
@@ -21,8 +26,8 @@ class Midi(Extension):
             self.MIDI = adafruit_midi.MIDI(midi_out=usb_midi.ports[port], out_channel=out_channel)
 
             make_argumented_key(
-                validator=midi_key_validator,
                 names=('MIDI',),
+                constructor=MidiNoteKey,
                 on_press=self._on_n,
                 on_release=self._off_n,
             )

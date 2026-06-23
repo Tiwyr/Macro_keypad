@@ -30,12 +30,20 @@ def sequence_press_handler(key, keyboard, KC, *args, **kwargs):
     return keyboard
 
 
+_sequence_id = 0
+
+
 def simple_key_sequence(seq):
-    return make_key(
-        meta=KeySequenceMeta(seq),
+    global _sequence_id
+    _sequence_id += 1
+
+    key = make_key(
+        names=('_SEQ_' + str(_sequence_id),),
         on_press=sequence_press_handler,
         on_release=passthrough,
     )
+    key.meta = KeySequenceMeta(seq)
+    return key
 
 
 def send_string(message):
@@ -56,8 +64,8 @@ IBUS_KEY_COMBO = simple_key_sequence((KC.LCTRL(KC.LSHIFT(KC.U)),))
 RALT_KEY = simple_key_sequence((KC.RALT,))
 U_KEY = simple_key_sequence((KC.U,))
 ENTER_KEY = simple_key_sequence((KC.ENTER,))
-RALT_DOWN_NO_RELEASE = simple_key_sequence((KC.RALT(no_release=True),))
-RALT_UP_NO_PRESS = simple_key_sequence((KC.RALT(no_press=True),))
+RALT_DOWN_NO_RELEASE = simple_key_sequence((KC.RALT,))
+RALT_UP_NO_PRESS = simple_key_sequence((KC.RALT,))
 
 
 def compile_unicode_string_sequences(string_table):
