@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.016,
-          "height": 1.9304,
-          "width": 1.9304
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -70,7 +70,60 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|114335000|112725000|2fbfd296-852f-40c2-8607-184a7b038db5|fb7ce3fc-06c2-479f-aeb7-c562485fcc2f",
+          ""
+        ],
+        [
+          "courtyards_overlap|114335000|131775000|7c8cde55-eeda-4796-8b8f-a56fa7490178|f283c379-e4c3-4150-8d5c-0177df313cee",
+          ""
+        ],
+        [
+          "courtyards_overlap|114335000|93675000|09873718-ab94-482a-8afe-4b23355f217a|ae1c1355-eb5b-47f2-9531-dacdaa5047cb",
+          ""
+        ],
+        [
+          "courtyards_overlap|133385000|112725000|aab22708-f4d3-400f-88cc-a2dee77fd9b8|c8ef709d-1ae7-4da9-bd8a-59315718f9ab",
+          ""
+        ],
+        [
+          "courtyards_overlap|133385000|131775000|d85cf5fd-2628-45e9-987e-fd67d52b4a90|e349c55c-fb14-4ec3-81d4-6d041c9de394",
+          ""
+        ],
+        [
+          "courtyards_overlap|133385000|93675000|88b82d15-63cd-424d-a538-f1486484e6e2|a7608b1c-e282-4e95-8369-c9f23dff0379",
+          ""
+        ],
+        [
+          "courtyards_overlap|176855000|44705000|3529f8c4-b5fe-495d-9a8f-93071f518c1c|a8cd184f-897f-4331-89da-9c105a36349b",
+          ""
+        ],
+        [
+          "courtyards_overlap|76235000|112725000|092adb2a-470a-4ebc-8b34-64d9719d8e66|197fd46e-7222-45eb-8c05-695a74f6c0c1",
+          ""
+        ],
+        [
+          "courtyards_overlap|76235000|131775000|71f86ca3-4a46-48a7-bb82-e6c29863dfc6|aca2da24-a503-49b8-8ea7-b42511247d28",
+          ""
+        ],
+        [
+          "courtyards_overlap|76235000|93675000|df185057-7c21-4b71-9872-fe44e78ee4ea|fb70c7ad-aa98-460b-97ef-92f9d03e6fad",
+          ""
+        ],
+        [
+          "courtyards_overlap|95285000|112725000|4c5717c5-f277-44f6-a741-ac70d7e0e665|7eae0c5f-58d6-45e8-ad00-61587a13cd0e",
+          ""
+        ],
+        [
+          "courtyards_overlap|95285000|131775000|488be7a1-83f9-4844-8f1d-d60a9b50592b|f0227860-88d1-466a-95fb-ab42cd6acf3e",
+          ""
+        ],
+        [
+          "courtyards_overlap|95285000|93675000|0c68e355-00e0-4b69-bc69-3f1967e37fba|e027df8f-181b-41d6-a6f6-bc37b4651032",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -546,7 +599,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "./",
-      "plot": "",
+      "plot": "../../../Downloads/gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../Cad/Macro_Keyboard_Circuit.step",

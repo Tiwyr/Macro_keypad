@@ -1,6 +1,8 @@
 from kmk.keys import KC
 from kmk.modules.macros import Macros, Press, Release, Tap , Delay
 from kmk.handlers.sequences import simple_key_sequence, send_string
+import kmk.extensions.keymap_extras.keymap_swe as swe_keymap
+
 
 def _decode_key_name(key_name):
     key_name = key_name.strip()
@@ -91,8 +93,81 @@ def decode_macro(macro):
         on_release=tuple(release_cmd) or None,
     )
 
+def send_string_sv(text):
+    seq = []
 
-def action_to_key(action):
+    for char in text:
+        if char in swe_keymap.SV_CHARS:
+            seq.append(swe_keymap.SV_CHARS[char])
+        elif char.isupper():
+            seq.append(KC.LSHIFT(getattr(KC, char)))
+        elif char == " ":
+            seq.append(KC.SPACE)
+        else:
+            seq.append(getattr(KC, char.upper()))
+
+    return simple_key_sequence(seq)
+
+
+def convert_string_sv(text):
+    seq = []
+    tap_seq = []
+
+    for char in text:
+        if char in swe_keymap.SV_CHARS:
+            seq.append(swe_keymap.SV_CHARS[char])
+        elif char.isupper():
+            seq.append(KC.LSHIFT(getattr(KC, char)))
+        elif char == " ":
+            seq.append(KC.SPACE)
+        else:
+            seq.append(getattr(KC, char.upper()))
+
+    for char in seq:
+        tap_seq.append(Tap(char))
+
+    return tap_seq
+
+
+
+def cmd_args(cmd):
+    cmd = convert_string_sv(cmd)
+
+    return KC.MACRO(
+        Tap(KC.LGUI(KC.R)),
+        Delay(300),
+        "cmd",
+        Tap(KC.ENTER),
+        Delay(300),
+        *cmd,
+        Tap(KC.ENTER),
+    )
+
+def launch_app(path):
+    path = convert_string_sv(path)
+
+    return KC.MACRO(
+        Tap(KC.LGUI(KC.R)),
+        Delay(300),
+        *path,
+        Tap(KC.ENTER),
+    )
+
+def open_url(url):
+    url = url.strip()
+    url = convert_string_sv(url)
+
+    return KC.MACRO(
+        Tap(KC.LGUI(KC.R)),
+        Delay(300),
+        "Chrome",
+        Tap(KC.ENTER),
+        Delay(300),
+        *url,
+        Tap(KC.ENTER),
+    )
+    
+def action_to_key(action, naitive_cmd):
     if action is None:
         return KC.NO
 
@@ -100,11 +175,26 @@ def action_to_key(action):
         return getattr(KC, action[3:])
 
     if action.startswith("STRING:"):
-        return send_string(action[7:])
+        return send_string_sv(action[7:])
     
     if action.startswith("MACRO:"):
         return (decode_macro(action[6:]))
-
+    
+    if action.startswith("CMD:"):
+        return (cmd_args(action[4:])) #Maybe change CMD,LAUNCH,URL to communicate with the windows app instead.
+    
+    if action.startswith("LAUNCH:"):
+        if naitive_cmd:
+            return (launch_app(action[7:]))
+        else:
+            #Communicate with windows app
+            raise NotImplementedError("not supported yet")
+    
+    if action.startswith("URL:"):
+        if naitive_cmd:
+            return (open_url(action[4:]))
+        else:
+            raise NotImplementedError("not supported yet")
 
 
     return KC.NO

@@ -22,8 +22,7 @@ class LayerButtonModule(Module):
             pass
 
         self.fake_key = _Key()
-        self.fake_key.meta = _Meta()
-        self.fake_key.meta.layer = layer_to_toggle
+        self.fake_key.layer = layer_to_toggle
 
     #
     # -------- MODULE HOOKS (KMK kräver dessa) --------

@@ -16,8 +16,7 @@ class LayerButtonModule(Module):
             pass
 
         self.fake_key = _Key()
-        self.fake_key.meta = _Meta()
-        self.fake_key.meta.layer = layer_to_toggle
+        self.fake_key.layer = layer_to_toggle
 
     def before_matrix_scan(self, keyboard):
         cur = self.pin.value  # True = släppt (pull-up), False = nedtryckt
