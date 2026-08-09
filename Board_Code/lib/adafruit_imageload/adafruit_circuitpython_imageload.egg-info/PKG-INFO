@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: adafruit-circuitpython-imageload
+Version: 0.0.0+auto.0
+Summary: Displays text using CircuitPython's displayio.
+Author-email: Adafruit Industries <circuitpython@adafruit.com>
+License: MIT
+Project-URL: Homepage, https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad
+Keywords: adafruit,blinka,circuitpython,micropython,bitmap,fonts,text,display,tft,lcd,displayio,imageload,image
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: System :: Hardware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+Requires-Dist: Adafruit-Blinka
+Requires-Dist: adafruit-blinka-displayio
+Provides-Extra: optional

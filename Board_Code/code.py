@@ -13,6 +13,9 @@ from kmk.modules.ui_display import setup_display
 import active_config
 from lib.kmk.macro_decder import action_to_key
 import kmk.extensions.keymap_extras.keymap_swe
+from kmk.modules.desktop_communication import DesktopCommunication
+
+
 
 MAX_NR_LAYERS = 4
 
@@ -74,6 +77,9 @@ display_updater = setup_display(NR_LAYERS, LAYER_NAMES)
 layer_button = LayerButtonModule(layer_pin, layers, layer_count=NR_LAYERS)
 keyboard.modules.append(layer_button)
 keyboard.modules.append(display_updater)
+
+desktop_communication = DesktopCommunication()
+keyboard.modules.append(desktop_communication)
 
 if __name__ == "__main__":
     keyboard.go()

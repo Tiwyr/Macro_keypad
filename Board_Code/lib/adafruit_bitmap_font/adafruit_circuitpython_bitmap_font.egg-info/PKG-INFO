@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: adafruit-circuitpython-bitmap_font
+Version: 0.0.0+auto.0
+Summary: Loads bitmap fonts into CircuitPython displayio.
+Author-email: Adafruit Industries <circuitpython@adafruit.com>
+License: MIT
+Project-URL: Homepage, https://github.com/adafruit/Adafruit_CircuitPython_Bitmap_Font
+Keywords: adafruit,blinka,circuitpython,micropython,font,text,displayio,bitmap
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: System :: Hardware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+Requires-Dist: Adafruit-Blinka
+Requires-Dist: adafruit-blinka-displayio
+Provides-Extra: optional

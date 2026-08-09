@@ -8,27 +8,25 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Start Page")
         self.setGeometry(200,200,800,700)
+        widget = MyWidget()
+        self.setCentralWidget(widget)
 
 class MyWidget(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
 
-        self.hello = ["Hallo Welt", "Hei maailma", "Hola Mundo", "Привет мир"]
+        self.hello = ["JA", "YES", "Si", "Hai", "Oui", "Ja", "Da", "Ano", "Igen", "Tak", "Evet", "Sim", "是的", "はい", "예", "כן"]
 
-        self.button = QtWidgets.QPushButton("Click me!")
-        self.text = QtWidgets.QLabel("Hello World",
+        self.button = QtWidgets.QPushButton("Är Kalle Gay?")
+        self.text = QtWidgets.QLabel("?????",
                                      alignment=QtCore.Qt.AlignCenter)
 
-        self.text_2 = QtWidgets.QLabel("Hej Värld",
-                                             alignment=QtCore.Qt.AlignBottom  | QtCore.Qt.AlignLeft)
-
         self.layout = QtWidgets.QVBoxLayout(self)
-        self.layout.addWidget(self.text_2)
         self.layout.addWidget(self.text)
         self.layout.addWidget(self.button)
 
+
         self.button.clicked.connect(self.magic)
-        self.button.clicked.connect(self.magiker)
 
     @QtCore.Slot()
     def magic(self):
@@ -45,9 +43,7 @@ class MyWidget(QtWidgets.QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    #window = MainWindow()
-    #window.show()
-    widget = MyWidget()
-    widget.resize(800, 600)
-    widget.show()
+    window = MainWindow()
+    window.show()
+    
     sys.exit(app.exec())
