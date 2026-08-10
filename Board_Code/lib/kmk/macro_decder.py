@@ -201,20 +201,25 @@ def action_to_key(action, naitive_cmd):
         return (decode_macro(action[6:]))
     
     if action.startswith("CMD:"):
-        return (cmd_args(action[4:])) #Maybe change CMD,LAUNCH,URL to communicate with the windows app instead.
+        if naitive_cmd:
+            return (cmd_args(action[4:])) #Maybe change CMD,LAUNCH,URL to communicate with the windows app instead.
+        else:
+            return KC.MESSAGE(action)
     
     if action.startswith("LAUNCH:"):
         if naitive_cmd:
             return (launch_app(action[7:]))
         else:
             #Communicate with windows app
-            raise NotImplementedError("not supported yet")
+            return KC.MESSAGE(action)
+            #raise NotImplementedError("not supported yet")
     
     if action.startswith("URL:"):
         if naitive_cmd:
             return (open_url(action[4:]))
         else:
-            raise NotImplementedError("not supported yet")
+            return KC.MESSAGE(action)
+            #raise NotImplementedError("not supported yet")
 
 
     return KC.NO

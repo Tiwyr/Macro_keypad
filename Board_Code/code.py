@@ -59,6 +59,9 @@ encoders.pins = (
 
 keyboard.debug_enabled = False
 
+desktop_communication = DesktopCommunication()
+keyboard.modules.append(desktop_communication)
+
 keyboard.keymap = [
     [action_to_key(action, active_config.NAITIVE_CMD) for action in layer]
     for layer in key_actions
@@ -78,8 +81,7 @@ layer_button = LayerButtonModule(layer_pin, layers, layer_count=NR_LAYERS)
 keyboard.modules.append(layer_button)
 keyboard.modules.append(display_updater)
 
-desktop_communication = DesktopCommunication()
-keyboard.modules.append(desktop_communication)
+
 
 if __name__ == "__main__":
     keyboard.go()

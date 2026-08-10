@@ -1,8 +1,7 @@
 import sys
 
 from PySide6 import QtCore, QtGui, QtWidgets
-from BackendProcesses import background_process
-
+from BackendProcesses import BackgroundProcess
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -14,33 +13,68 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.Tray_init()
 
-        # Example background process: this runs every five seconds, even while
-        # the window is hidden. Replace background_task with your own work.
-        self.background_timer = QtCore.QTimer(self)
-        self.background_timer.timeout.connect(self.background_task)
-        self.background_timer.start(5_000)
+        self.worker = BackgroundProcess(self)
+        self.worker.connection_changed.connect(self.update_connection_status)
+        self._last_connection_state = None
+        self.update_connection_status(self.worker.connected)
+
+    
 
 
     def Tray_init(self):
-                tray_icon = self.style().standardIcon(
-                    QtWidgets.QStyle.StandardPixmap.SP_ComputerIcon
-                )
-                self.tray = QtWidgets.QSystemTrayIcon(tray_icon, self)
-                self.tray.setToolTip("Macro Keypad")
-        
-                tray_menu = QtWidgets.QMenu()
-        
-                show_action = QtGui.QAction("Show", self)
-                show_action.triggered.connect(self.show_from_tray)
-                tray_menu.addAction(show_action)
-        
-                quit_action = QtGui.QAction("Quit", self)
-                quit_action.triggered.connect(QtWidgets.QApplication.quit)
-                tray_menu.addAction(quit_action)
-        
-                self.tray.setContextMenu(tray_menu)
-                self.tray.activated.connect(self.tray_activated)
-                self.tray.show()
+        tray_icon = self.style().standardIcon(
+            QtWidgets.QStyle.StandardPixmap.SP_DesktopIcon
+        )
+        self.tray = QtWidgets.QSystemTrayIcon(tray_icon, self)
+        self.tray.setToolTip("Macro Keypad")
+
+        tray_menu = QtWidgets.QMenu()
+
+        self.status_action = QtGui.QAction("Status: Disconnected", self)
+        self.status_action.setEnabled(False)
+        tray_menu.addAction(self.status_action)
+        tray_menu.addSeparator()
+
+        show_action = QtGui.QAction("Show", self)
+        show_action.triggered.connect(self.show_from_tray)
+        tray_menu.addAction(show_action)
+
+        quit_action = QtGui.QAction("Quit", self)
+        quit_action.triggered.connect(QtWidgets.QApplication.quit)
+        tray_menu.addAction(quit_action)
+
+        self.tray.setContextMenu(tray_menu)
+        self.tray.activated.connect(self.tray_activated)
+        self.tray.show()
+
+
+    @QtCore.Slot(bool)
+    def update_connection_status(self, connected):
+        previous_state = self._last_connection_state
+        self._last_connection_state = connected
+
+        if connected:
+            icon = self.style().standardIcon(
+                QtWidgets.QStyle.StandardPixmap.SP_DialogApplyButton
+            )
+            self.status_action.setText("Status: Connected")
+            self.tray.setToolTip("Macro Keypad — Connected")
+        else:
+            icon = self.style().standardIcon(
+                QtWidgets.QStyle.StandardPixmap.SP_MessageBoxWarning
+            )
+            self.status_action.setText("Status: Disconnected")
+            self.tray.setToolTip("Macro Keypad — Disconnected")
+
+        self.tray.setIcon(icon)
+
+        if previous_state is True and not connected:
+            self.tray.showMessage(
+                "Macro Keypad",
+                "The keypad connection was lost.",
+                QtWidgets.QSystemTrayIcon.MessageIcon.Warning,
+                3_000,
+            )
 
 
     def closeEvent(self, event):
@@ -65,9 +99,7 @@ class MainWindow(QtWidgets.QMainWindow):
         if reason == QtWidgets.QSystemTrayIcon.ActivationReason.Trigger:
             self.show_from_tray()
 
-    @QtCore.Slot()
-    def background_task(self):
-        print("Background task is running")
+    
 
 
 class MyWidget(QtWidgets.QWidget):
