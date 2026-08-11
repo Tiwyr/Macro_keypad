@@ -28,7 +28,7 @@ The keypad is powered by an Adafruit KB2040 running CircuitPython and KMK firmwa
 
 ## Personal configuration
 
-I currently use the three rotary encoders to control separate audio channels in SteelSeries GG Sonar. This is why the encoder keycaps use audio-related symbols.
+I currently use the three rotary encoders to control separate audio channels in SteelSeries GG Sonar. This is why the encoder logos on the chassit panel are what they are.
 
 The encoder actions are programmable, and the encoder panel design can be modified using the included STEP or Fusion 360 files.
 

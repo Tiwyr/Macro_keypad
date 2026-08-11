@@ -2,6 +2,7 @@ import sys
 
 from PySide6 import QtCore, QtGui, QtWidgets
 from BackendProcesses import BackgroundProcess
+from Left_Toolbar import Profile_Toolbar
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -9,16 +10,26 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.setWindowTitle("Start Page")
         self.setGeometry(200, 200, 800, 700)
-        self.setCentralWidget(MyWidget())
+        
+        
 
+        self.setCentralWidget(MyWidget())
+        self.toolbar = Profile_Toolbar()
+        self.addToolBar(QtCore.Qt.LeftToolBarArea, self.toolbar)
+        #self.Profile_Toolbar_init()
         self.Tray_init()
 
+        #self.setCorner(QtCore.Qt.TopLeftCorner, )
         self.worker = BackgroundProcess(self)
         self.worker.connection_changed.connect(self.update_connection_status)
         self._last_connection_state = None
         self.update_connection_status(self.worker.connected)
 
-    
+        self.setStatusBar(QtWidgets.QStatusBar(self))
+
+        
+
+
 
 
     def Tray_init(self):
@@ -59,12 +70,14 @@ class MainWindow(QtWidgets.QMainWindow):
             )
             self.status_action.setText("Status: Connected")
             self.tray.setToolTip("Macro Keypad — Connected")
+            self.statusBar().showMessage("Connected")
         else:
             icon = self.style().standardIcon(
                 QtWidgets.QStyle.StandardPixmap.SP_MessageBoxWarning
             )
             self.status_action.setText("Status: Disconnected")
             self.tray.setToolTip("Macro Keypad — Disconnected")
+            self.statusBar().showMessage("Disconnected")
 
         self.tray.setIcon(icon)
 
@@ -123,12 +136,43 @@ class MyWidget(QtWidgets.QWidget):
             alignment=QtCore.Qt.AlignmentFlag.AlignHCenter,
         )
 
+        
+
+def set_appTheme(app: QtWidgets.QApplication):
+    app.setStyle("Fusion")  # Optional, but respects palettes consistently
+    
+    palette = app.palette()
+    Role = QtGui.QPalette.ColorRole
+
+    palette.setColor(Role.Window, QtGui.QColor(30, 30, 30))
+    palette.setColor(Role.WindowText, QtGui.QColor(240, 240, 240))
+
+    palette.setColor(Role.Base, QtGui.QColor(20, 20, 20))
+    palette.setColor(Role.AlternateBase, QtGui.QColor(40, 40, 40))
+    palette.setColor(Role.Text, QtGui.QColor(240, 240, 240))
+    palette.setColor(Role.PlaceholderText, QtGui.QColor(140, 140, 140))
+
+    palette.setColor(Role.Button, QtGui.QColor(45, 45, 45))
+    palette.setColor(Role.ButtonText, QtGui.QColor(240, 240, 240))
+
+    palette.setColor(Role.Highlight, QtGui.QColor(40, 110, 190))
+    palette.setColor(Role.HighlightedText, QtGui.QColor(255, 255, 255))
+
+    palette.setColor(Role.ToolTipBase, QtGui.QColor(50, 50, 50))
+    palette.setColor(Role.ToolTipText, QtGui.QColor(255, 255, 255))
+
+    palette.setColor(Role.Link, QtGui.QColor(80, 160, 255))
+    palette.setColor(Role.BrightText, QtGui.QColor(255, 70, 70))
+
+    app.setPalette(palette)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
-
+    set_appTheme(app)
+    
     window = MainWindow()
     window.show()
 
     sys.exit(app.exec())
+
