@@ -6,3 +6,4 @@ PySide6_Essentials==6.11.1
 PyYAML==6.0.3
 serial==0.0.97
 shiboken6==6.11.1
+serial-tools==0.4.2

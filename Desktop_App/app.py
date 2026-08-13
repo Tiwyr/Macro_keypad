@@ -3,6 +3,7 @@ import sys
 from PySide6 import QtCore, QtGui, QtWidgets
 from BackendProcesses import BackgroundProcess
 from Left_Toolbar import Profile_Toolbar
+from profile_window import Profile_window
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -13,10 +14,13 @@ class MainWindow(QtWidgets.QMainWindow):
         
         
 
-        self.setCentralWidget(MyWidget())
+        #self.setCentralWidget(MyWidget())
         self.toolbar = Profile_Toolbar()
         self.addToolBar(QtCore.Qt.LeftToolBarArea, self.toolbar)
-        #self.Profile_Toolbar_init()
+        #Load profiles from data base
+
+        self.setCentralWidget(Profile_window())
+
         self.Tray_init()
 
         #self.setCorner(QtCore.Qt.TopLeftCorner, )
