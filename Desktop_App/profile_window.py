@@ -1,5 +1,6 @@
 from PySide6 import QtCore, QtWidgets
-CELL_SIZE = 120
+CELL_MIN_SIZE = 120
+CELL_MAX_SIZE = 200
 CELL_SPACING = 10
 
 class Profile_window(QtWidgets.QWidget):
@@ -40,6 +41,7 @@ class Profile_window(QtWidgets.QWidget):
 
         self.Layer_Box.setLayout(QtWidgets.QVBoxLayout())
         self.Layer_selection = QtWidgets.QListWidget(self.Layer_Box)
+      
         self.Layer_Box.layout().addWidget(self.Layer_selection)
 
         #self.Layer_selection.setMinimumSize(50, 30)
@@ -56,7 +58,8 @@ class Profile_window(QtWidgets.QWidget):
     
     def fill_overview_box(self):
         self.Button_Box = QtWidgets.QWidget(self.overview_box)
-        self.Button_Box.setFixedSize((CELL_SIZE+CELL_SPACING) * 4, (CELL_SIZE+CELL_SPACING) * 3)
+        self.Button_Box.setMinimumSize((CELL_MIN_SIZE+CELL_SPACING) * 4, (CELL_MIN_SIZE+CELL_SPACING) * 3)
+        self.Button_Box.setMaximumSize((CELL_MAX_SIZE+CELL_SPACING) * 4, (CELL_MAX_SIZE+CELL_SPACING) * 3)
         self.grid = QtWidgets.QGridLayout(self.Button_Box)
    
         
@@ -64,13 +67,15 @@ class Profile_window(QtWidgets.QWidget):
         self.grid.setHorizontalSpacing(CELL_SPACING)
         for i in range(3):
             for j in range(4):
-                button = QtWidgets.QPushButton(f"Button {i*4+j+1}", self)
-                button.setFixedSize(CELL_SIZE, CELL_SIZE)
-                self.grid.addWidget(button, i, j, alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
+                button = QtWidgets.QPushButton(f"Button {i*4+j+1}", self.Button_Box)
+                button.setMinimumSize(CELL_MIN_SIZE, CELL_MIN_SIZE)
+                button.setMaximumSize(CELL_MAX_SIZE,CELL_MAX_SIZE)
+                button.setSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Expanding)
+                self.grid.addWidget(button, i, j, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
 
 
         self.Encoder_Box = QtWidgets.QWidget(self)
-        self.Encoder_Box.setMinimumSize(20, 20)
+        #self.Encoder_Box.setMinimumSize(20, 20)
         #self.Encoder_Box.setMaximumSize(300, 300)
         self.Encoder_Box.setStyleSheet(
             "background-color: rgb(240, 0, 0);"
