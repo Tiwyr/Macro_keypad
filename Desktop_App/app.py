@@ -23,7 +23,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.Tray_init()
 
-        #self.setCorner(QtCore.Qt.TopLeftCorner, )
+
         self.worker = BackgroundProcess(self)
         self.worker.connection_changed.connect(self.update_connection_status)
         self._last_connection_state = None
@@ -32,9 +32,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setStatusBar(QtWidgets.QStatusBar(self))
 
         
-
-
-
 
     def Tray_init(self):
         tray_icon = self.style().standardIcon(
