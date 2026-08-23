@@ -1,92 +1,16 @@
+from pathlib import Path
+
 from PySide6 import QtCore, QtWidgets
-from PySide6.QtGui import QIcon
+from PySide6.QtGui import QPixmap
+from macro_buttons import Macro_button, Macro_encoder
+from edit_window import Edit_window
+
 CELL_SIZE = 180
 CELL_SPACING = 10
 BUTTON_IDENTIFIERS = ["7","8","9","●","4","5","6","■","1","2","3","0"]
-
-class Macro_button(QtWidgets.QPushButton):
-
-    def __init__(self, 
-                 id: int,
-                 identifier: str,
-                 identifier_index: int,
-                 function_type: str | None = None,
-                 cmd: str | None = None,
-                 icon: QIcon | None = None,
-                 parent= None, 
-                 ):
-        
-        super().__init__(parent)
-        self.id = id
-        self.identifier = identifier
-        self.setText(identifier)
-        self.id_index = identifier_index
-
-        if function_type is not None:
-            self.function = function_type
-
-        if cmd is not None:
-            self.cmd = cmd
-
-        if icon is not None:
-            self.icon = icon
+ENCODER_IDENTIFIERS = ["E1","E2","E3"]
 
 
-    def set_functionality(self, function_type: str,cmd: str):
-        self.function = function_type
-        self.cmd = cmd
-
-    def set_icon(self, icon: QIcon):
-        self.icon = icon
-
-    def remove_icon(self):
-        self.icon = QIcon()
-
-    def reset_button(self):
-        self.function = None
-        self.cmd = None
-        self.remove_icon()
-
-class Macro_encoder(QtWidgets.QPushButton):
-    def __init__(self, 
-                id: int,
-                identifier: str,
-                identifier_index: int,
-                function_type: str | None = None,
-                cmd: str | None = None,
-                parent= None, 
-                ):
-        
-        super().__init__(parent)
-        self.id = id
-        self.identifier = identifier
-        self.setText(identifier)
-        self.id_index = identifier_index
-
-        if function_type is not None:
-            self.function = function_type
-
-        if cmd is not None:
-            self.cmd = cmd
-
-        self.setFixedSize(120,120)
-
-        self.setStyleSheet("""
-            QPushButton {
-                background-color: rgb(40, 120, 220);
-                color: white;
-                border: none;
-                border-radius: 60px;
-            }
-
-            QPushButton:hover {
-                background-color: rgb(60, 145, 245);
-            }
-
-            QPushButton:pressed {
-                background-color: rgb(25, 90, 175);
-            }
-        """)
 
 
 
@@ -102,13 +26,25 @@ class Layer(QtWidgets.QWidget):
         self.grid.setVerticalSpacing(CELL_SPACING)
         self.grid.setHorizontalSpacing(CELL_SPACING)
 
+        
+        
+        icon_path = (
+            Path(__file__).resolve().parent
+            / "images"
+            / "Pictorial_modified.bmp"
+        )
+        pixmap = QPixmap(str(icon_path))
+        
+
         for i in range(3):
             for j in range(4):
-                button = Macro_button(id=5, identifier=BUTTON_IDENTIFIERS[i*4+j], identifier_index=(i*4+j), parent=self.Button_Box)
+                button = Macro_button(size= CELL_SIZE, id=5, identifier=BUTTON_IDENTIFIERS[i*4+j], identifier_index=(i*4+j), icon=pixmap, parent=self.Button_Box)
                 button.setFixedSize(CELL_SIZE, CELL_SIZE)
-
+                button.clicked.connect(lambda checked=False, current_button = button: self.edit_button(button=current_button))
                 self.grid.addWidget(button, i, j, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
 
+        item = self.grid.itemAtPosition(0,0).widget()
+        item.set_functionality("CMD:", "dsapmsdas")
 
         self.Encoder_Box = QtWidgets.QWidget(self)
         self.Encoder_Box_Layout = QtWidgets.QVBoxLayout(self.Encoder_Box)
@@ -122,10 +58,19 @@ class Layer(QtWidgets.QWidget):
             }
         """)
 
+        for encoder in range(3):
+            self.Encoder_Box_Layout.addWidget(Macro_encoder(id=2,identifier=ENCODER_IDENTIFIERS[encoder],identifier_index=encoder), alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
+
         
         self.layout.addWidget(self.Button_Box, alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.layout.addWidget(self.Encoder_Box, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.Encoder_Box_Layout.addWidget(Macro_encoder(id=2,identifier="E1",identifier_index=1), alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
+
+
+    def edit_button(self, button):
+         self.edit = Edit_window(button=button)
+         self.edit.resize(600, 400)
+         self.edit.show()
+        
 
 class Profile_window(QtWidgets.QWidget):
 
@@ -138,8 +83,6 @@ class Profile_window(QtWidgets.QWidget):
 
         self.Box_adjustment_box = QtWidgets.QWidget(self)
         self.Box_adjustment_box_layout = QtWidgets.QHBoxLayout(self.Box_adjustment_box)
-        #self.Box_adjustment_box_layout.setContentsMargins(0, 0, 0, 0)
-        #self.Box_adjustment_box_layout.setSpacing(0)
         self.Horizontal_spacer = QtWidgets.QWidget(self.Box_adjustment_box)
         self.Horizontal_spacer.setFixedWidth(1)
         
@@ -169,37 +112,37 @@ class Profile_window(QtWidgets.QWidget):
         self.fill_Layer_box()
 
         self.Layer_selection.currentRowChanged.connect(self.display_layer)
+
+
+    def fill_Layer_box(self):
+    
+            self.Active_Layers = []
+            self.Layer_Box.setLayout(QtWidgets.QVBoxLayout())
+            self.Layer_selection = QtWidgets.QListWidget(self.Layer_Box)
+          
+            self.Layer_Box.layout().addWidget(self.Layer_selection)
+    
+            
+            self.Layer_selection.setSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Expanding)
+    
+            self.add_Action = QtWidgets.QPushButton("Add Layer", self.Layer_Box)
+            self.Layer_Box.layout().addWidget(self.add_Action)
+            self.remove_Action = QtWidgets.QPushButton("Remove Layer", self.Layer_Box)
+            self.Layer_Box.layout().addWidget(self.remove_Action)
+            self.rename_Action = QtWidgets.QPushButton("Rename Layer", self.Layer_Box)
+            self.Layer_Box.layout().addWidget(self.rename_Action)
+    
+            self.add_Action.clicked.connect(self.add_Layer)
+            self.remove_Action.clicked.connect(self.remove_Layer)
+            self.rename_Action.clicked.connect(self.rename_Layer)
+    
+            self.add_Layer()
         
         
         
     
     def display_layer(self):
         self.overview_box.setCurrentIndex(self.Layer_selection.currentRow())
-        
-        
-    def fill_Layer_box(self):
-
-        self.Active_Layers = []
-        self.Layer_Box.setLayout(QtWidgets.QVBoxLayout())
-        self.Layer_selection = QtWidgets.QListWidget(self.Layer_Box)
-      
-        self.Layer_Box.layout().addWidget(self.Layer_selection)
-
-        
-        self.Layer_selection.setSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Expanding)
-
-        self.add_Action = QtWidgets.QPushButton("Add Layer", self.Layer_Box)
-        self.Layer_Box.layout().addWidget(self.add_Action)
-        self.remove_Action = QtWidgets.QPushButton("Remove Layer", self.Layer_Box)
-        self.Layer_Box.layout().addWidget(self.remove_Action)
-        self.rename_Action = QtWidgets.QPushButton("Rename Layer", self.Layer_Box)
-        self.Layer_Box.layout().addWidget(self.rename_Action)
-
-        self.add_Action.clicked.connect(self.add_Layer)
-        self.remove_Action.clicked.connect(self.remove_Layer)
-        self.rename_Action.clicked.connect(self.rename_Layer)
-
-        self.add_Layer()
         
 
     

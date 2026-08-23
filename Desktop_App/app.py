@@ -12,9 +12,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowTitle("Start Page")
         self.setGeometry(200, 200, 800, 700)
         
-        
-
-        #self.setCentralWidget(MyWidget())
         self.toolbar = Profile_Toolbar()
         self.addToolBar(QtCore.Qt.LeftToolBarArea, self.toolbar)
         #Load profiles from data base
@@ -113,29 +110,6 @@ class MainWindow(QtWidgets.QMainWindow):
         if reason == QtWidgets.QSystemTrayIcon.ActivationReason.Trigger:
             self.show_from_tray()
 
-    
-
-
-class MyWidget(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
-
-        grid = QtWidgets.QGridLayout(self)
-
-        grid.addWidget(QtWidgets.QLabel("Name:"), 0, 0)
-        grid.addWidget(QtWidgets.QLineEdit(), 0, 1)
-
-        grid.addWidget(QtWidgets.QLabel("Email:"), 1, 0)
-        grid.addWidget(QtWidgets.QLineEdit(), 1, 1)
-
-        save_button = QtWidgets.QPushButton("Save")
-        save_button.setFixedSize(120, 40)
-        grid.addWidget(
-            save_button,
-            2,
-            1,
-            alignment=QtCore.Qt.AlignmentFlag.AlignHCenter,
-        )
 
         
 
