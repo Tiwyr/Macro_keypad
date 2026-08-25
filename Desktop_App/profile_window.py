@@ -34,13 +34,6 @@ class Layer(QtWidgets.QWidget):
         else:
              self.Layer_id = None
 
-        # icon_path = (
-        #     Path(__file__).resolve().parent
-        #     / "images"
-        #     / "Pictorial_modified.bmp"
-        # )
-        # image = icon_path.read_bytes()
-        
 
         for i in range(3):
             for j in range(4):
@@ -244,7 +237,6 @@ class Profile_window(QtWidgets.QWidget):
             return False
 
     def trigger_changed_flag(self):
-         print("triggered")
          self.is_changed = True
          
 
