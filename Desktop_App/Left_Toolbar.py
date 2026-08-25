@@ -3,6 +3,9 @@ from PySide6 import QtCore, QtWidgets
 
 class Profile_Toolbar(QtWidgets.QToolBar):
     active_profile_signal = QtCore.Signal(str)
+    confirmed_delete_profile_signal = QtCore.Signal(str)
+    confirmed_renamed_profile_signal = QtCore.Signal(str)
+    added_profile_signal = QtCore.Signal(str)
 
     def __init__(self):
         super().__init__()
@@ -29,6 +32,8 @@ class Profile_Toolbar(QtWidgets.QToolBar):
         self.addWidget(self.profile_list)
 
         self.bottom_menu_init()
+
+        
 
     @property
     def active_profile(self):
@@ -71,9 +76,7 @@ class Profile_Toolbar(QtWidgets.QToolBar):
         self.del_action.triggered.connect(
             lambda checked=False: self.DeleteProfile()
         )
-        self.save_action.triggered.connect(
-            lambda checked=False: self.SaveProfile()
-        )
+
         self.upload_action.triggered.connect(
             lambda checked=False: self.UploadProfile()
         )
@@ -81,26 +84,61 @@ class Profile_Toolbar(QtWidgets.QToolBar):
             lambda checked=False: self.RenameProfile()
         )
 
+
+
     def AddProfile(self, name=None):
         if name is None:
-            name = f"Profile {self.profile_list.count() + 1}"
+            profile_number = self.profile_list.count() + 1
+            name = f"Profile {profile_number}"
+
+            while self.Name_check(name):
+                    profile_number += 1
+                    name = f"Profile {profile_number}"
 
         self.profile_list.addItem(name)
-        self.profile_list.setCurrentRow(self.profile_list.count() - 1)
+        self.added_profile_signal.emit(name)
+        self.set_active_profile(self.profile_list.count() - 1)
+        
+
+
 
     def RenameProfile(self):
         current_item = self.profile_list.currentItem()
+        old_name = current_item.text()
+
         if current_item is None:
             return
 
         new_name, ok = QtWidgets.QInputDialog.getText(
             self, "Rename Profile", "Enter new profile name:", text=current_item.text()
         )
+
+        if self.Name_check(new_name):
+            QtWidgets.QMessageBox.warning(
+                self,
+                "Invalid profile name",
+                "A profile with this name already exists.",
+            )
+            self.RenameProfile()
+            return
+            
+
         if ok and new_name:
             current_item.setText(new_name)
+            self.confirmed_renamed_profile_signal.emit(new_name)
 
-    def SaveProfile(self):
-        pass
+
+
+    def Name_check(self, name) -> bool:
+
+        for profile in range(self.profile_list.count()):
+
+            if self.profile_list.item(profile).text() == name:
+                return True
+
+        return False
+
+
 
     def DeleteProfile(self):
         if self.profile_list.count() <= 1:
@@ -108,6 +146,9 @@ class Profile_Toolbar(QtWidgets.QToolBar):
             return
 
         selected_row = self.profile_list.currentRow()
+        profile_name = self.profile_list.currentItem().text()
+        
+        
         if selected_row < 0:
             return
         
@@ -120,20 +161,29 @@ class Profile_Toolbar(QtWidgets.QToolBar):
         self.profile_list.takeItem(selected_row)
         # Keep the nearest remaining profile selected.
         next_row = min(selected_row, self.profile_list.count() - 1)
-        self.profile_list.setCurrentRow(next_row)
+        self.set_active_profile(next_row)
+        self.confirmed_delete_profile_signal.emit(profile_name)
+
+
 
     def UploadProfile(self):
-        pass
+        return
+
+    
 
     @QtCore.Slot(int)
     def set_active_profile(self, row):
         if row < 0:
             return
 
+        
+        self.profile_list.setCurrentRow(row)
         profile_item = self.profile_list.item(row)
-        print(f"Setting active profile: {profile_item.text()}")
         self.active_profile_signal.emit(profile_item.text())
+
+
+
 
     def load_profiles(self, profiles):
         for profile_name in profiles:
-            self.AddProfile(profile_name)
+            self.AddProfile(profile_name["name"])

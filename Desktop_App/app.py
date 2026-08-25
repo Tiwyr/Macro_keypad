@@ -4,6 +4,7 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from BackendProcesses import BackgroundProcess
 from Left_Toolbar import Profile_Toolbar
 from profile_window import Profile_window
+import database
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -11,16 +12,39 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.setWindowTitle("Start Page")
         self.setGeometry(200, 200, 800, 700)
+
+        self.DB = database.Database()
+        self.DB_profiles = self.DB.list_profiles()
+
+        
         
         self.toolbar = Profile_Toolbar()
         self.addToolBar(QtCore.Qt.LeftToolBarArea, self.toolbar)
-        #Load profiles from data base
 
-        self.setCentralWidget(Profile_window())
+        if not self.DB_profiles:
+                    self.DB.create_profile("Profile 1")
+                    self.DB_profiles = self.DB.list_profiles()
+
+        
+
+        self.toolbar.load_profiles(self.DB_profiles)
+        
+        #Load profiles from data base
+        self.profile_window = Profile_window()
+        self.setCentralWidget(self.profile_window)
+
+        self.toolbar.active_profile_signal.connect(self.change_profile)
+        self.toolbar.confirmed_delete_profile_signal.connect(self.delete_profile)
+        self.toolbar.confirmed_renamed_profile_signal.connect(self.rename_profile)
+        self.toolbar.added_profile_signal.connect(self.add_profile)
+        self.toolbar.save_action.triggered.connect(self.save_profile_to_DB)
+
 
         self.Tray_init()
+        self.toolbar.set_active_profile(0)
 
-
+    
+        
         self.worker = BackgroundProcess(self)
         self.worker.connection_changed.connect(self.update_connection_status)
         self._last_connection_state = None
@@ -28,7 +52,75 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.setStatusBar(QtWidgets.QStatusBar(self))
 
+    @QtCore.Slot(str)
+    def change_profile(self, profile_name):
+        if self.profile_window.is_changed:
+             answer = QtWidgets.QMessageBox.question(
+                  self,
+                  "Confirm save",
+                  "The profile has been modified do you want to save?",
+             (
+                QtWidgets.QMessageBox.StandardButton.Save
+                | QtWidgets.QMessageBox.StandardButton.No
+                ),
+                QtWidgets.QMessageBox.StandardButton.No,
+            )
+
+             if answer == QtWidgets.QMessageBox.StandardButton.Save:
+                self.save_profile_to_DB()
+             else:
+                pass
+             
+        print(f"Load profile {profile_name}")
+        profile_data = self.DB.load_profile(self.id_from_name(profile_name))
+        self.profile_window.load_profile(profile_data=profile_data)
+        self.current_profile_id = profile_data["id"]
+
+    def delete_profile(self, profile_name):
+         self.DB.delete_profile(self.current_profile_id)
+         self.DB_profiles = self.DB.list_profiles()
+
+    def add_profile(self, profile_name):
+         self.DB.create_profile(profile_name)
+         self.DB_profiles = self.DB.list_profiles()
+
+    def rename_profile(self, new_name):
+             self.DB.rename_profile(self.current_profile_id,new_name)
+             self.DB_profiles = self.DB.list_profiles()
+
+    def save_profile_to_DB(self):
+
+        for layer_id in self.profile_window.removed_layer_ids:
+             self.DB.delete_layer(layer_id)
         
+        layers = self.profile_window.overview_box
+        for layer_index in range(layers.count()):
+            layer_widget = layers.widget(layer_index)
+
+            if layer_widget.Layer_id is None:
+                 generated_id = self.DB.add_layer(self.current_profile_id, layer_widget.name)
+                 layer_widget.Layer_id = generated_id
+
+            else:
+                 self.DB.rename_layer(layer_widget.Layer_id, layer_widget.name)
+
+            for i in range(3):
+                for j in range(4):
+                        button = layer_widget.grid.itemAtPosition(i,j).widget()
+                        self.DB.update_button( layer_widget.Layer_id,
+                                               button.id_index,
+                                               button.function,
+                                               button.cmd,
+                                               button.icon_data
+                                               )
+        return 
+        
+
+    def id_from_name(self, profile_name):
+        for profile in self.DB_profiles:
+                      if profile["name"] == profile_name:
+                           return profile["id"]
+
 
     def Tray_init(self):
         tray_icon = self.style().standardIcon(
@@ -150,4 +242,3 @@ if __name__ == "__main__":
     window.show()
 
     sys.exit(app.exec())
-

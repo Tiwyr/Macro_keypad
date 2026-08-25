@@ -6,17 +6,16 @@ class Macro_button(QtWidgets.QPushButton):
 
     def __init__(self,
                  size: int,  
-                 id: int,
                  identifier: str,
                  identifier_index: int,
                  function_type: str | None = None,
                  cmd: str | None = None,
-                 icon: QPixmap | None = None,
+                 icon: bytes | None = None,
                  parent= None, 
                  ):
         
         super().__init__(parent)
-        self.id = id
+
         self.identifier = identifier
         self.id_index = identifier_index
         self.size_ = size
@@ -36,14 +35,11 @@ class Macro_button(QtWidgets.QPushButton):
 
        
 
-        if function_type is not None:
-            self.function = function_type
-
-        if cmd is not None:
-            self.cmd = cmd
-
-        if icon is not None:
-            self.set_icon(icon, 0.5)
+        
+        self.function = function_type
+        self.cmd = cmd
+        self.set_icon(icon, 0.5)
+            
 
 
     def set_functionality(self, function_type: str,cmd: str):
@@ -52,11 +48,16 @@ class Macro_button(QtWidgets.QPushButton):
 
  
 
-    def set_icon(self, pixmap: QPixmap, opacity: float) -> None:
-        if pixmap.isNull():
+    def set_icon(self, image: bytes, opacity: float) -> None:
+        if image == None:
             self.remove_icon()
             return
 
+        pixmap = QPixmap()
+
+        if not pixmap.loadFromData(image, "BMP"):
+            raise ValueError("Could not load BMP image data")
+        
         opacity = max(0.0, min(1.0, opacity))
         target_size = QtCore.QSize(self.size_ - 10, self.size_ - 10)
         scaled_pixmap = pixmap.scaled(
@@ -75,9 +76,11 @@ class Macro_button(QtWidgets.QPushButton):
 
         self.setIcon(QIcon(transparent_pixmap))
         self.setIconSize(target_size)
+        self.icon_data = image
 
     def remove_icon(self):
         self.setIcon(QPixmap())
+        self.icon_data = None
 
     def show_identifier(self):
         self.label.show()
