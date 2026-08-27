@@ -81,7 +81,7 @@ class Layer(QtWidgets.QWidget):
          self.name = new_name
 
     def edit_button(self, button):
-         self.edit = Edit_window(button=button)
+         self.edit = Edit_window(button=button, parent= self.window())
          self.edit.changes_saved.connect(self.changed.emit)
          self.edit.resize(600, 400)
          self.edit.show()

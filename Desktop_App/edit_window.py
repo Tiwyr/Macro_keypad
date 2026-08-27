@@ -1,8 +1,10 @@
 from PySide6 import QtCore, QtWidgets, QtGui
-from PySide6.QtGui import QIcon, QPainter, QPixmap
+from PySide6.QtGui import QIcon, QPixmap
 from database import Database
 from macro_buttons import Macro_button, Macro_encoder
 import subprocess
+import sys
+
 
 ICON_SIZE = 300
 
@@ -18,6 +20,9 @@ class Edit_window(QtWidgets.QSplitter):
         database: Database | None = None,
     ):
         super().__init__(parent)
+
+        self.setWindowFlag(QtCore.Qt.WindowType.Window, True)
+        self.setWindowModality(QtCore.Qt.WindowModality.WindowModal)
 
         self.database = database if database is not None else Database()
 
@@ -780,6 +785,11 @@ class Edit_window(QtWidgets.QSplitter):
      stdout=subprocess.PIPE,
      stderr=subprocess.PIPE,
      check=True,
+     creationflags=(
+        subprocess.CREATE_NO_WINDOW
+        if sys.platform == "win32"
+        else 0
+    ),
      )
 
       return result.stdout
