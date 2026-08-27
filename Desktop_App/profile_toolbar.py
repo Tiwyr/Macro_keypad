@@ -77,9 +77,6 @@ class Profile_Toolbar(QtWidgets.QToolBar):
             lambda checked=False: self.DeleteProfile()
         )
 
-        self.upload_action.triggered.connect(
-            lambda checked=False: self.UploadProfile()
-        )
         self.rename_action.triggered.connect(
             lambda checked=False: self.RenameProfile()
         )
@@ -97,7 +94,8 @@ class Profile_Toolbar(QtWidgets.QToolBar):
 
         self.profile_list.addItem(name)
         self.added_profile_signal.emit(name)
-        self.set_active_profile(self.profile_list.count() - 1)
+        self.profile_list.setCurrentRow(self.profile_list.count()-1)
+       
         
 
 
@@ -158,16 +156,11 @@ class Profile_Toolbar(QtWidgets.QToolBar):
         if confirm_deletion == QtWidgets.QMessageBox.No:
             return
         
-        self.profile_list.takeItem(selected_row)
-        # Keep the nearest remaining profile selected.
-        next_row = min(selected_row, self.profile_list.count() - 1)
-        self.set_active_profile(next_row)
+        
         self.confirmed_delete_profile_signal.emit(profile_name)
-
-
-
-    def UploadProfile(self):
-        return
+        self.profile_list.takeItem(selected_row)
+  
+        
 
     
 
@@ -176,8 +169,6 @@ class Profile_Toolbar(QtWidgets.QToolBar):
         if row < 0:
             return
 
-        
-        self.profile_list.setCurrentRow(row)
         profile_item = self.profile_list.item(row)
         self.active_profile_signal.emit(profile_item.text())
 
@@ -187,3 +178,5 @@ class Profile_Toolbar(QtWidgets.QToolBar):
     def load_profiles(self, profiles):
         for profile_name in profiles:
             self.AddProfile(profile_name["name"])
+
+        self.profile_list.setCurrentRow(0)

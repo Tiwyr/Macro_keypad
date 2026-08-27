@@ -1,10 +1,15 @@
 import sys
-
-from PySide6 import QtCore, QtGui, QtWidgets
-from BackendProcesses import BackgroundProcess
-from Left_Toolbar import Profile_Toolbar
+import ctypes
+from pathlib import Path
+from PySide6 import QtCore, QtGui, QtWidgets, QtNetwork
+from backgroundprocess import BackgroundProcess
+from profile_toolbar import Profile_Toolbar
 from profile_window import Profile_window
+from upload_script import flash_to_board
 import database
+
+
+INSTANCE_NAME = "MacroKeypad.DesktopApp"
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -38,6 +43,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.toolbar.confirmed_renamed_profile_signal.connect(self.rename_profile)
         self.toolbar.added_profile_signal.connect(self.add_profile)
         self.toolbar.save_action.triggered.connect(self.save_profile_to_DB)
+        self.toolbar.upload_action.triggered.connect(self.upload_profile)
 
 
         self.Tray_init()
@@ -71,17 +77,20 @@ class MainWindow(QtWidgets.QMainWindow):
              else:
                 pass
              
-        print(f"Load profile {profile_name}")
-        profile_data = self.DB.load_profile(self.id_from_name(profile_name))
+        id = self.id_from_name(profile_name)
+        profile_data = self.DB.load_profile(id)
         self.profile_window.load_profile(profile_data=profile_data)
         self.current_profile_id = profile_data["id"]
+        print(f"Load profile {profile_name} with id:{self.current_profile_id}, idFromName ={id}")
 
     def delete_profile(self, profile_name):
+         print(f"Deleting id {self.current_profile_id}")
          self.DB.delete_profile(self.current_profile_id)
          self.DB_profiles = self.DB.list_profiles()
 
     def add_profile(self, profile_name):
-         self.DB.create_profile(profile_name)
+         id = self.DB.create_profile(profile_name)
+         print(f"Created profile {profile_name} with id: {id}")
          self.DB_profiles = self.DB.list_profiles()
 
     def rename_profile(self, new_name):
@@ -113,13 +122,62 @@ class MainWindow(QtWidgets.QMainWindow):
                                                button.cmd,
                                                button.icon_data
                                                )
-        return 
+                        
+        self.profile_window.reset_changed_flag()
+
+    def upload_profile(self):
+
+        if self.save_check() == False:
+             return
         
+        flash_to_board(self.DB.load_profile(self.current_profile_id))
+        
+
+        
+             
+        
+        
+    def save_check(self) -> bool:
+        if self.profile_window.is_changed:
+                    message_box = QtWidgets.QMessageBox(self)
+                    message_box.setWindowTitle("Confirm save")
+                    message_box.setText(
+                        "The profile must be saved before it can be uploaded. \n The upload will cause the board to restart"
+                    )
+        
+                    message_box.setStandardButtons(
+                        QtWidgets.QMessageBox.StandardButton.Save
+                        | QtWidgets.QMessageBox.StandardButton.Abort
+                    )
+        
+                    save_button = message_box.button(
+                        QtWidgets.QMessageBox.StandardButton.Save
+                    )
+                    save_button.setText("Save and upload")
+        
+                    abort_button = message_box.button(
+                        QtWidgets.QMessageBox.StandardButton.Abort
+                    )
+                    abort_button.setText("Cancel")
+        
+                    message_box.setDefaultButton(abort_button)
+        
+                    answer = message_box.exec()
+        
+                    if answer == QtWidgets.QMessageBox.StandardButton.Save:
+                        self.save_profile_to_DB()
+                        return True
+                    else:
+                        return False
+        
+                
 
     def id_from_name(self, profile_name):
         for profile in self.DB_profiles:
                       if profile["name"] == profile_name:
                            return profile["id"]
+
+    
 
 
     def Tray_init(self):
@@ -233,12 +291,37 @@ def set_appTheme(app: QtWidgets.QApplication):
 
     app.setPalette(palette)
 
+
+
 if __name__ == "__main__":
+    if sys.platform == "win32":
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+            INSTANCE_NAME
+        )
+
     app = QtWidgets.QApplication(sys.argv)
+
+    # Check whether another instance already exists.
+    instance_probe = QtNetwork.QLocalSocket()
+    instance_probe.connectToServer(INSTANCE_NAME)
+
+    if instance_probe.waitForConnected(300):
+        # Existing instance found—the connection tells it to show its window.
+        instance_probe.disconnectFromServer()
+        sys.exit(0)
+
+    # This is the first instance, so start listening.
+    instance_server = QtNetwork.QLocalServer()
+    if not instance_server.listen(INSTANCE_NAME):
+        raise RuntimeError(instance_server.errorString())
+
     app.setQuitOnLastWindowClosed(False)
     set_appTheme(app)
-    
+
     window = MainWindow()
     window.show()
+
+    # A connection means the pinned icon was clicked again.
+    instance_server.newConnection.connect(window.show_from_tray)
 
     sys.exit(app.exec())

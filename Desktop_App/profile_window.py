@@ -239,7 +239,8 @@ class Profile_window(QtWidgets.QWidget):
     def trigger_changed_flag(self):
          self.is_changed = True
          
-
+    def reset_changed_flag(self):
+         self.is_changed = False
     
     def load_profile(self, profile_data):
         for i in range(self.overview_box.count()):
@@ -249,4 +250,4 @@ class Profile_window(QtWidgets.QWidget):
             self.add_Layer(layer)
 
         self.removed_layer_ids = []
-        self.is_changed = False
+        self.reset_changed_flag()

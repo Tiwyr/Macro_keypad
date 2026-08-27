@@ -7,11 +7,6 @@ import subprocess
 ICON_SIZE = 300
 
 
-
-
-
-
-
 class Edit_window(QtWidgets.QSplitter):
 
     changes_saved = QtCore.Signal()
@@ -31,6 +26,7 @@ class Edit_window(QtWidgets.QSplitter):
         self.temp_function = getattr(button, "function", None)
         self.temp_icon_data = getattr(button, "icon_data", None)
         self.temp_icon = QIcon()
+        self.temp_icon_path = ""
         self.original_button = button
 
         self.setOrientation(QtCore.Qt.Vertical)
@@ -159,7 +155,67 @@ class Edit_window(QtWidgets.QSplitter):
 
     def icon_menu_init(self):
         self.icon_panel = QtWidgets.QWidget(self.horizontal_splitter)
-        self.icon_layout = QtWidgets.QVBoxLayout(self.icon_panel)
+        self.icon_layout = QtWidgets.QHBoxLayout(self.icon_panel)
+
+        self.backround_menu = QtWidgets.QGroupBox("Icon Backround")
+        self.color_selection = QtWidgets.QGroupBox("Select fill in color")
+        self.convert_selection = QtWidgets.QGroupBox("Select color conversion")
+
+        backround_menu_layout = QtWidgets.QVBoxLayout(self.backround_menu)
+        color_selection_layout = QtWidgets.QVBoxLayout(self.color_selection)
+        convert_selection_layout = QtWidgets.QVBoxLayout(self.convert_selection)
+
+
+
+        self.FillTransperent = QtWidgets.QCheckBox("Fill Transperent Background")
+        self.FillColored = QtWidgets.QCheckBox("Replace Black or White")
+
+        self.Apply_button = QtWidgets.QPushButton("Apply")
+        
+        self.whiteCheck = QtWidgets.QCheckBox("White")
+        self.blackCheck = QtWidgets.QCheckBox("Black")
+
+        self.w2bCheck = QtWidgets.QCheckBox("White to Black")
+        self.b2wCheck = QtWidgets.QCheckBox("Black to White")
+        
+        self.number_box = QtWidgets.QSpinBox()
+        self.number_box.setRange(0, 100)
+        self.number_box.setValue(10)
+        self.number_box.setSingleStep(1)
+        self.number_box.setSuffix(" %")
+
+
+
+
+        backround_menu_layout.addWidget(self.FillTransperent)
+        backround_menu_layout.addWidget(self.FillColored)
+        backround_menu_layout.addWidget(self.color_selection)
+        backround_menu_layout.addWidget(self.convert_selection)
+        backround_menu_layout.addWidget(self.Apply_button)
+
+        color_selection_layout.addWidget(self.whiteCheck)
+        color_selection_layout.addWidget(self.blackCheck)
+
+        convert_selection_layout.addWidget(self.w2bCheck)
+        convert_selection_layout.addWidget(self.b2wCheck)
+        convert_selection_layout.addWidget(self.number_box)
+       
+
+
+        self.convert_selection.hide()
+        self.color_selection.hide()
+
+        self.FillTransperent.checkStateChanged.connect(lambda checked: self.toggle_check(state=checked, button="Trans"))
+        self.FillColored.checkStateChanged.connect(lambda checked: self.toggle_check(state=checked, button="Color"))
+
+        self.whiteCheck.checkStateChanged.connect(lambda checked: self.toggle_check(state=checked, button="White"))
+        self.blackCheck.checkStateChanged.connect(lambda checked: self.toggle_check(state=checked, button="Black"))
+
+        self.w2bCheck.checkStateChanged.connect(lambda checked: self.toggle_check(state=checked, button="W2B"))
+        self.b2wCheck.checkStateChanged.connect(lambda checked: self.toggle_check(state=checked, button="B2W"))
+
+        self.Apply_button.clicked.connect(self.apply_filter)
+
 
         self.button = QtWidgets.QPushButton(self.icon_panel)
         self.set_temp_icon(self.temp_icon_data)
@@ -168,36 +224,20 @@ class Edit_window(QtWidgets.QSplitter):
 
         self.button.clicked.connect(self.select_icon)
 
+
         self.icon_layout.addWidget(
             self.button,
             alignment=QtCore.Qt.AlignmentFlag.AlignCenter,
         )
 
+        self.icon_layout.addWidget(
+                    self.backround_menu,
+                    alignment=QtCore.Qt.AlignmentFlag.AlignCenter,
+                )
+
         self.horizontal_splitter.addWidget(self.icon_panel)
 
-    def set_temp_icon(self, image_data: bytes | None) -> None:
-        self.temp_icon_data = image_data
-
-        if image_data is None:
-            self.temp_icon = QIcon()
-            self.button.setIcon(self.temp_icon)
-            return
-
-        pixmap = QPixmap()
-
-        if not pixmap.loadFromData(image_data, "BMP"):
-            raise ValueError("Invalid BMP image data")
-
-        preview_size = QtCore.QSize(ICON_SIZE - 10, ICON_SIZE - 10)
-
-        preview_pixmap = pixmap.scaled(
-            preview_size,
-            QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-            QtCore.Qt.TransformationMode.SmoothTransformation,
-        )
-
-        self.temp_icon = QIcon(preview_pixmap)
-        self.button.setIcon(self.temp_icon)
+    
 
     # -------------------------------FUNCTION BUTTONS-------------------------------------------------
 
@@ -400,20 +440,25 @@ class Edit_window(QtWidgets.QSplitter):
             self.temp_cmd = new_url
             self.set_active_function()
 
-    def edit_Launch(self):
-        if self.temp_function == "LAUNCH:":
-            current_path = self.temp_cmd
-        else:
-            current_path = ""
 
-        new_path, ok = QtWidgets.QInputDialog.getText(
-            self, "Edit Launch", "Enter the path to the program:", text=current_path
+
+    def edit_Launch(self):
+        file_path, _ = QtWidgets.QFileDialog.getOpenFileName(
+            self,
+            "Select an image",
+            "",
+            "Programs (*.exe *.com *.scr)",
         )
 
-        if ok and new_path:
+        if file_path == "":
+            return
+        
+        else:
             self.temp_function = "LAUNCH:"
-            self.temp_cmd = new_path
+            self.temp_cmd = file_path
             self.set_active_function()
+
+
 
     def edit_CMD(self):
         if self.temp_function == "CMD:":
@@ -578,32 +623,111 @@ class Edit_window(QtWidgets.QSplitter):
 
     # ---------------------------------------------------------Icon button---------------------------------------------------------------------------------------------------
 
+    
+
+    def toggle_check(self, state : QtCore.Qt.CheckState, button : str):
+
+        if state == QtCore.Qt.CheckState.Checked:
+            if button == "Trans":
+                print("Trans checked")
+                self.color_selection.show()
+                self.FillColored.setCheckState(QtCore.Qt.CheckState.Unchecked)
+                self.b2wCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+                self.w2bCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+
+            elif button == "Color":
+                print("Color checked")
+                self.convert_selection.show()
+                self.FillTransperent.setCheckState(QtCore.Qt.CheckState.Unchecked)
+                self.blackCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+                self.whiteCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+
+            elif button == "White":
+                self.blackCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+
+            elif button == "Black":
+                self.whiteCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+
+            elif button == "W2B":
+                self.b2wCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+
+            elif button == "B2W":
+                self.w2bCheck.setCheckState(QtCore.Qt.CheckState.Unchecked)
+
+        else:
+            if button == "Trans":
+                self.color_selection.hide()
+
+            elif button == "Color":
+                self.convert_selection.hide()
+
+        return
+
+    def apply_filter(self):
+        self.set_temp_icon(self.convert_icon())
+
+    def set_temp_icon(self, image_data: bytes | None) -> None:
+            self.temp_icon_data = image_data
+    
+            if image_data is None:
+                self.temp_icon = QIcon()
+                self.button.setIcon(self.temp_icon)
+                return
+    
+            pixmap = QPixmap()
+    
+            if not pixmap.loadFromData(image_data, "BMP"):
+                raise ValueError("Invalid BMP image data")
+    
+            preview_size = QtCore.QSize(ICON_SIZE - 10, ICON_SIZE - 10)
+    
+            preview_pixmap = pixmap.scaled(
+                preview_size,
+                QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                QtCore.Qt.TransformationMode.SmoothTransformation,
+            )
+    
+            self.temp_icon = QIcon(preview_pixmap)
+            self.button.setIcon(self.temp_icon)
+
+
     def select_icon(self):
         file_path, _ = QtWidgets.QFileDialog.getOpenFileName(
             self,
             "Select an image",
             "",
-            "Images (*.png *.jpg *.jpeg *.bmp *.ico)",
+            "Images (*.png *.jpg *.jpeg *.bmp *.ico *.webp)",
         )
 
         if file_path == "":
             return
 
-        image_blob = self.convert_icon(file_path)
-        
-        self.set_temp_icon(image_blob)
+        self.temp_icon_path = file_path
+        # image_blob = self.convert_icon()
+        # self.set_temp_icon(image_blob)
+        self.apply_filter()
 
 
-    def convert_icon(self, path):
+    def convert_icon(self):
       size = 55
       keep_aspect = False
 
       size_text = f"{size}x{size}"
       resize = size_text if keep_aspect else size_text + "!"
 
+      if self.temp_icon_path == "" and self.temp_icon_data is None:
+          return None
+
+      elif self.temp_icon_path == "": #Prioritize reading from path if avilable
+        path = "-"
+
+      else:
+          path = str(self.temp_icon_path)
+
+    
       command = [
      "magick",
-     str(path),
+     path,
      "-resize",
      resize,
      "-colors",
@@ -615,8 +739,44 @@ class Edit_window(QtWidgets.QSplitter):
      "BMP3:-",  # Write BMP bytes to stdout
      ]
 
+      if self.FillTransperent.checkState() == QtCore.Qt.CheckState.Checked and (self.whiteCheck.checkState() == QtCore.Qt.CheckState.Checked or self.blackCheck.checkState() == QtCore.Qt.CheckState.Checked):
+    
+          if self.whiteCheck.checkState() == QtCore.Qt.CheckState.Checked:
+              Color = "white"
+          else:
+              Color = "black"
+
+          command[2:2] = [
+                "-background",
+                Color,
+                "-alpha",
+                "remove",
+            ]
+      
+      elif self.FillColored.checkState() == QtCore.Qt.CheckState.Checked and (self.w2bCheck.checkState() == QtCore.Qt.CheckState.Checked or self.b2wCheck.checkState() == QtCore.Qt.CheckState.Checked):
+          if self.w2bCheck.checkState() == QtCore.Qt.CheckState.Checked:
+              From = "white"
+              To = "black"
+          else:
+              From = "black"
+              To = "white"
+
+          fuzz = str(self.number_box.value()) + "%"
+
+          command[2:2] = [
+              "-fuzz",
+              fuzz,
+              "-fill",
+              To,
+              "-opaque",
+              From,
+
+
+          ]
+
       result = subprocess.run(
      command,
+     input= self.temp_icon_data,
      stdout=subprocess.PIPE,
      stderr=subprocess.PIPE,
      check=True,
