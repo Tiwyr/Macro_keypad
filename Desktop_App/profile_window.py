@@ -11,7 +11,11 @@ BUTTON_IDENTIFIERS = ["7","8","9","●","4","5","6","■","1","2","3","0"]
 ENCODER_IDENTIFIERS = ["E1","E2","E3"]
 
 
+def set_widget_sizes(screen: QtCore.QRect):
+     global CELL_SIZE
 
+     CELL_SIZE = screen.width() * 0.094
+     return
 
 
 class Layer(QtWidgets.QWidget):
@@ -96,7 +100,7 @@ class Profile_window(QtWidgets.QWidget):
         super().__init__(parent)
         self.setWindowTitle("Profile Window")
         self.Base_Layout = QtWidgets.QVBoxLayout(self)
-
+        print(CELL_SIZE)
         self.Box_adjustment_box = QtWidgets.QWidget(self)
         self.Box_adjustment_box_layout = QtWidgets.QHBoxLayout(self.Box_adjustment_box)
         self.Horizontal_spacer = QtWidgets.QWidget(self.Box_adjustment_box)

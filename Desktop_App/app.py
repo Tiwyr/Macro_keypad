@@ -4,7 +4,7 @@ from pathlib import Path
 from PySide6 import QtCore, QtGui, QtWidgets, QtNetwork
 from backgroundprocess import BackgroundProcess
 from profile_toolbar import Profile_Toolbar
-from profile_window import Profile_window
+from profile_window import Profile_window, set_widget_sizes
 from upload_script import flash_to_board
 import database
 
@@ -14,15 +14,15 @@ INSTANCE_NAME = "MacroKeypad.DesktopApp"
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-
+        screen = self.screen().availableGeometry()
         self.setWindowTitle("Start Page")
-        self.setGeometry(200, 200, 800, 700)
+        self.setGeometry(200, 200, screen.width() * 0.42, screen.height() * 0.7)
 
         self.DB = database.Database()
         self.DB_profiles = self.DB.list_profiles()
 
         
-        
+        set_widget_sizes(screen)
         self.toolbar = Profile_Toolbar()
         self.addToolBar(QtCore.Qt.LeftToolBarArea, self.toolbar)
 
@@ -36,6 +36,7 @@ class MainWindow(QtWidgets.QMainWindow):
         
         #Load profiles from data base
         self.profile_window = Profile_window()
+        set_widget_sizes(screen)
         self.setCentralWidget(self.profile_window)
 
         self.toolbar.active_profile_signal.connect(self.change_profile)
