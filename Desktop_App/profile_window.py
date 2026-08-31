@@ -24,7 +24,14 @@ class Layer(QtWidgets.QWidget):
 
     def __init__(self, name : str, parent=None, layer_data = None):
         super().__init__(parent)
+        self.name = name
         self.layout = QtWidgets.QHBoxLayout(self)
+        self.macro_button_grid_init(layer_data)
+        #self.encoder_box_init()
+
+        
+        
+    def macro_button_grid_init(self, layer_data = None):
         self.Button_Box = QtWidgets.QWidget(self)
         self.Button_Box.setFixedSize((CELL_SIZE+CELL_SPACING) * 4, (CELL_SIZE+CELL_SPACING) * 3)
         self.grid = QtWidgets.QGridLayout(self.Button_Box)
@@ -32,11 +39,11 @@ class Layer(QtWidgets.QWidget):
         self.grid.setVerticalSpacing(CELL_SPACING)
         self.grid.setHorizontalSpacing(CELL_SPACING)
 
-        self.name = name
+        
         if layer_data is not None:
-             self.Layer_id = layer_data["id"]
+            self.Layer_id = layer_data["id"]
         else:
-             self.Layer_id = None
+            self.Layer_id = None
 
 
         for i in range(3):
@@ -52,16 +59,21 @@ class Layer(QtWidgets.QWidget):
                                             icon= layer_data["buttons"][index]["icon_data"],
                                             )
                 else:
-                     button = Macro_button(  size= CELL_SIZE,
-                                                                 identifier=BUTTON_IDENTIFIERS[index],
-                                                                 identifier_index=(index),
-                                                                 parent=self.Button_Box,
-                                                                 )
+                    button = Macro_button(  size= CELL_SIZE,
+                                                                identifier=BUTTON_IDENTIFIERS[index],
+                                                                identifier_index=(index),
+                                                                parent=self.Button_Box,
+                                                                )
                 button.setFixedSize(CELL_SIZE, CELL_SIZE)
                 button.clicked.connect(lambda checked=False, current_button = button: self.edit_button(button=current_button))
                 self.grid.addWidget(button, i, j, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
 
 
+        
+        
+        self.layout.addWidget(self.Button_Box, alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
+
+    def encoder_box_init(self):
         self.Encoder_Box = QtWidgets.QWidget(self)
         self.Encoder_Box_Layout = QtWidgets.QVBoxLayout(self.Encoder_Box)
         self.Encoder_Box.setFixedSize(350, 600)
@@ -77,9 +89,8 @@ class Layer(QtWidgets.QWidget):
         for encoder in range(3):
             self.Encoder_Box_Layout.addWidget(Macro_encoder(id=2,identifier=ENCODER_IDENTIFIERS[encoder],identifier_index=encoder), alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
 
-        
-        self.layout.addWidget(self.Button_Box, alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.layout.addWidget(self.Encoder_Box, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
+
 
     def edit_name(self, new_name : str):
          self.name = new_name
@@ -100,7 +111,6 @@ class Profile_window(QtWidgets.QWidget):
         super().__init__(parent)
         self.setWindowTitle("Profile Window")
         self.Base_Layout = QtWidgets.QVBoxLayout(self)
-        print(CELL_SIZE)
         self.Box_adjustment_box = QtWidgets.QWidget(self)
         self.Box_adjustment_box_layout = QtWidgets.QHBoxLayout(self.Box_adjustment_box)
         self.Horizontal_spacer = QtWidgets.QWidget(self.Box_adjustment_box)
