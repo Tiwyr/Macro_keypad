@@ -46,6 +46,7 @@ Macro_keypad/
 ## Firmware configuration
 
 Key and encoder actions are configured in:
+OBS! This is automatically configured using the desktop app
 
 ```text
 Board_Code/active_config.py
