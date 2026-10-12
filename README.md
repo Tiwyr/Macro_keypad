@@ -45,7 +45,9 @@ Macro_keypad/
 
 ## Firmware configuration
 
-OBS! The config file is automatically configured using the desktop app
+OBS! The config file is automatically configured using the desktop app.
+
+
 Key and encoder actions are configured in:
 
 ```text
